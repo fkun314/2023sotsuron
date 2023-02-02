@@ -1,6 +1,29 @@
 \documentclass[a4j,12pt,dvipdfmx]{jreport}
 \usepackage[top=35mm, bottom=30mm, left=30mm, right=30mm]{geometry}
 
+<<<<<<< HEAD
+% \oddsidemargin= 5mm   
+\textwidth = 160mm
+\textheight = 205mm
+% \addtolength{\textheight}{3cm}
+% %\addtolength{\textwidth}{1.5cm}
+% \topmargin = -5mm
+% \headheight = 0mm
+% \footskip = 10mm
+
+% % 図形に関する処理
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\dbltopfraction}{1.0}
+\renewcommand{\textfraction}{0.01}
+\renewcommand{\floatpagefraction}{1.0}
+\renewcommand{\dblfloatpagefraction}{1.0}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+
+=======
+>>>>>>> parent of 36117c4 (考察増やした)
 \usepackage{url}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{amsmath,amsthm,amssymb,ascmac}
@@ -20,22 +43,40 @@
 \begin{document}
 \pagenumbering{roman}
 %表紙
-\begin{titlepage}
-  \begin{center}
-    {\large 令和4年度　卒業研究論文}\\
-    \vspace{150truept}
-    {\huge CNNを用いた動画インデックス作成に関する研究}\\
-    \vspace{300truept}
-    {\large 総合工学科 \textnormal{I}類 5年 34番　藤田晴斗}\\
-    {\large 指導教員　総合工学科　藤原和彦}\\
-    \vspace{30truept}
-    {\large 仙台高等専門学校}\\
-  \end{center}
+\begin{titlepage} \centering
+  %\LARGE
+  \null \null
+  \vspace{10mm}
+  令和04年度　卒業研究論文\\
+  %\vfill
+  \vspace{55.15mm}
+  \null
+  % 研究題目\\
+  {\Large CNNを用いた動画インデックス作成に関する研究}\\
+  %\vfill \vfill
+  %\vfill
+  
+  \vspace{87.5mm}
+  %{\Large 平成24年2月23日}
+  %\vspace{15mm}
+  
+  \large
+  総合工学科 情報システムコース 5年\\[1mm]
+  1801113 藤田　晴斗\\[1mm]
+  指導教員 総合工学科 藤原　和彦\\
+  
+  \vspace{16mm}
+  {仙台高等専門学校}
+  \null
+
 \end{titlepage}
 
 %目次
-\tableofcontents
-\clearpage
+% \tableofcontents
+% \clearpage
+\clearpage \input{content.tex}{\clearpage}
+\large
+\renewcommand{\baselinestretch}{1.1}
 
 \chapter{序論}
 \pagenumbering{arabic}
@@ -89,7 +130,7 @@
 \item[第\ref{sec:system}章 \qquad 動画解析システムについて]\mbox{}\\
 本システムの全体の仕組みや，使用した技術について述べる．
 
-\item[第\ref{sec:consideration}章 \qquad 考察]\mbox{}\\
+\item[第\ref{sec:consideration}章 \qquad 動作検証と考察]\mbox{}\\
 動作結果とともに，本システムの課題や今後の展望について述べる．
 
 \item[第\ref{sec:conclusion}章 \qquad 結論]\mbox{}\\
@@ -416,7 +457,11 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 
 \begin{eqnarray}
   \label{eq:object_list}
+<<<<<<< HEAD
+  [[\text{“オブジェクト名“},x_{min},y_{min},x_{max},y_{max},\text{UUID}],\cdots]
+=======
   [[‘オブジェクト名’,x_{min},y_{min},x_{max},y_{max}],……]
+>>>>>>> parent of 36117c4 (考察増やした)
 \end{eqnarray}
 
 このようなPythonのリスト構造で動画と画像の物体名と座標が与えられる．
@@ -432,9 +477,18 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 例えば，図\ref{eq:object_list_before_sort}のリストの場合，オブジェクト名だけに注目したリストを作成すると次のようになる．
 
 \begin{eqnarray}
+<<<<<<< HEAD
+  \label{eq:center_x}
+  x_{center} = \frac{x_{min}+x_{max}}{2}
+\end{eqnarray}
+\begin{eqnarray}
+  \label{eq:center_y}
+  y_{center} = \frac{y_{min}+y_{max}}{2}
+=======
   \label{eq:object_list_before_sort}
   画像のリスト = [[‘person’, …], [‘person’, …], [‘skateboard’, …]] \\
   動画のリスト = [[‘person’, …], [‘skateboard’, …], [‘person’, …]]
+>>>>>>> parent of 36117c4 (考察増やした)
 \end{eqnarray}
 
 このリストは並び方が同じであるものの，リストの開始位置が合っていないため，データの比較が難しい．
@@ -448,14 +502,86 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 
 この方法でリストの並び替えを行なっていくが，並び替えが一周しても画像と動画のリストが一致しない場合は，検出したオブジェクト自体が異なっていることとなるため，このフレームでの比較はこれ以上行われず次のフレームの比較が行われる．
 
+<<<<<<< HEAD
+繰り返す処理が完了すると，全てのオブジェクトの外周を直線で結ぶ図形を図\ref{fig:figure_2}のように作成することができる．
+=======
 次に動画と画像で出力されたソート済みのリスト同士の比較を行う．
 ここで比較することは，オブジェクト間の距離，角度である．
 距離については，すべての辺に対して比を計算し，動画と画像での比がどの程度一致しているかを計算する．ま
 た，角度については，同じオブジェクト間の角度についてどの程度一致しているかを計算する．
+>>>>>>> parent of 36117c4 (考察増やした)
 
 どの程度ずれているかは，辺の比と角度の分散を参考にした．
 その値が大きいとデータにばらつきがあるという認識ができ，図形が一致していないと評価する．
 
+<<<<<<< HEAD
+また，(\ref{eq:object_list})式のリストの順番は，図形の最短経路で結んだ順番になっている．
+
+次に，オブジェクト間の距離と図形の内角を計算する．
+(\ref{eq:object_list})式の順番が，図形の最短経路で結ぶ順番でソートされているため，図形の内角は，(\ref{eq:angle})式で求めた角度の差分を計算することで求めることができる．
+使用する座標は，(\ref{eq:object_list})式から隣り合っている３点を選択し，２つの辺を作成する．
+その２つの辺のなす角度を計算することで，図形の内角を求めることができる．
+２つの辺は，３つの点をそれぞれ($x_1$, $y_1$), ($x_2$, $y_2$), ($x_3$, $y_3$)とすると，(\ref{eq:edge})式で求める．
+\begin{eqnarray}
+  \label{eq:edge}
+  \vec{e_1} = \left( \begin{array}{c} x_2-x_1 \\ y_2-y_1 \end{array} \right) \\
+  \vec{e_2} = \left( \begin{array}{c} x_3-x_1 \\ y_3-y_1 \end{array} \right)
+\end{eqnarray}
+
+角度の計算には，(\ref{eq:angle2})式を用いる．
+\begin{eqnarray}
+  \label{eq:angle2}
+  \theta = \arccos \left( \frac{\vec{e_1} \cdot \vec{e_2}}{|\vec{e_1}| |\vec{e_2}|} \right)
+\end{eqnarray}
+
+この処理を(\ref{eq:object_list})式のリストの要素全てに対して行うことで，図形の全ての内角を計算することができる．
+
+オブジェクト間の長さについては，(\ref{eq:edge})式で求めた$\vec{e_1}$で求めることができる．
+
+
+以上の処理を入力された画像および動画の各フレームに対して行うことで，類似シーンの検索を行うことができる．
+
+
+次に，図形の外周を通る順番でソートされたオブジェクトのリストを用いて，類似シーンの検索を行う．
+
+入力された画像と動画のフレームが類似しているかを判定する基準として，以下の４つを用いる．
+\begin{itemize}
+  \item オブジェクトの検出数が同じであること
+  \item オブジェクトの物体名が同じであること
+  \item オブジェクト同士を最短経路で結ぶ図形のそれぞれに対応する辺の比率が同じであること
+  \item オブジェクト同士を最短経路で結ぶ図形のそれぞれに対応する内角が同じであること
+\end{itemize}
+
+ただし，上記の条件では，オブジェクトの位置関係が100\%一致している必要があるため，類似シーンの検索には基準が厳しいと考えられる．
+
+この類似シーンの検索の結果には，拡大や縮小，回転などの変形が含まれている場合にも，類似性が高いと評価し，結果を出力したい．
+そのため，下記の条件を追加する．
+\begin{itemize}
+  \item オブジェクト同士を最短経路で結ぶ図形のそれぞれに対応する辺の比率が似ていること
+  \item オブジェクト同士を最短経路で結ぶ図形のそれぞれに対応する内角が似ていること
+\end{itemize}
+ここでの具体的な数値については設定せず，それぞれの結果をソートして，上位の結果を出力することで，類似シーンの検索を行う．
+
+図形が少しでも変形すると，辺の比率や内角の大きさが変化するため，図形全体でどの程度ずれているかを最後に計算する．
+計算する値は，図形の回転角度，オブジェクト間の長さの比率の平均，オブジェクト間の長さの比率の分散，オブジェクト間の角度の分散である．
+
+オブジェクト間の辺の長さについては，辺の比率の平均を計算する．
+この値は，図形の拡大・縮小の度合いを表す．
+値が大きくなればなるほど，図形が拡大されていることを示し，値が小さくなればなるほど，図形が縮小されていることを示す．
+
+また，長さの比率の分散を計算する．
+オブジェクト間の角度については，角度の分散を計算する．
+どちらの値も，この値が大きくなればなるほど，図形が変形されていることを示す．
+
+また，回転した図形についても，類似性が高いと評価したいため，図形の回転角度も考慮する．
+なお，回転角度の計算には，オブジェクト同士を最短経路で結ぶ図形のそれぞれに対応する辺同士の角度の平均を用いる．
+
+以上の過程を経て，類似シーンの検索を行う．
+結果の出力では，図形の回転角度，オブジェクト間の長さの比率の平均，オブジェクト間の長さの比率の分散，オブジェクト間の角度の分散を出力する．
+
+図形の形が似ている場合の出力結果を最優先したいため，図形のオブジェクト間の角度の分散を基準の出力のソートを行い，結果を出力する．
+=======
+>>>>>>> parent of 36117c4 (考察増やした)
 
 \section{まとめ}
 本システムの動画検索システムの基本的な動作について述べた．
@@ -502,7 +628,11 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/2_result.jpg}
+<<<<<<< HEAD
+  \caption{飛行機がプッシュバックしているシーンを撮影した動画}
+=======
   \caption{動画2つ目}
+>>>>>>> parent of 36117c4 (考察増やした)
   \label{fig:movie2}
 \end{figure}
 
@@ -530,6 +660,31 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 
 入力した画像と検索結果の動画フレームがほぼ一致していることがわかる．
 オブジェクトは，personとskateboardが検出されている．
+<<<<<<< HEAD
+スコアが一番高いものがベストマッチとして表示されているが，類似シーンがあれば，表\ref{tab:tab_1_1}のように類似度順で出力される．
+
+\begin{table}[t]
+  \centering
+  \caption{図\ref{fig:img_1_1}の検出結果}
+  \label{tab:tab_1_1}
+  \begin{tabular}{ccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{score}  \\
+    \midrule
+    production ID\_4265040.mp4 & 0 & 98.48 \\
+    production ID\_4265040.mp4 & 1 & 98.37 \\
+    production ID\_4265040.mp4 & 13 & 96.42 \\
+    production ID\_4265040.mp4 & 15 & 96.13 \\
+    production ID\_4265040.mp4 & 14 & 96.12 \\
+    production ID\_4265040.mp4 & 16 & 95.98 \\
+    production ID\_4265040.mp4 & 17 & 95.69 \\
+    production ID\_4265040.mp4 & 18 & 95.3 \\
+    production ID\_4265040.mp4 & 19 & 95.11 \\
+    production ID\_4265040.mp4 & 20 & 94.88 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+=======
 スコアが一番高いものがベストマッチとして表示されているが，このフレーム以外でも類似シーンがあれば，図\ref{fig:img_1-1-1}のように類似度順で表示される．
 \begin{figure}[b]
   \centering
@@ -537,6 +692,7 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
   \caption{検証画像1-2}
   \label{fig:img_1-1-1}
 \end{figure}
+>>>>>>> parent of 36117c4 (考察増やした)
 
 スコアが図\ref{fig:img_1-1-1}中にあるfps:80（スコア:97.9）のフレームの様子も図\ref{fig:img_1-1-2}に示す．
 \begin{figure}[b]
@@ -548,9 +704,34 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 
 この80フレーム目でも検出しているオブジェクトが同じであり，そのオブジェクトの検出された座標が近いため，スコアが高く出力されていることがわかる．
 このように，オブジェクトの位置が完全に一致していない場合でも，入力した画像と類似しているフレームがある場合は検索結果に表示される．
+<<<<<<< HEAD
+なお，出力されたフレーム数に出力すると，$0,1,13,15,..$とほぼフレーム順で類似シーンが出力されていることがわかる．
+ちなみに，production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{tab:tab_1_1_1}のようにおり，フレームレートが29.97であるため，
+動画の秒数に換算しても，0秒〜1秒の間で類似シーンが存在していることがわかる．
+\begin{table}[b]
+  \centering
+  \caption{production ID\_4265040.mp4の動画データの詳細}
+  \label{tab:tab_1_1_1}
+  \begin{tabular}{cc}
+    \toprule
+    \thead{項目} & \thead{数値} \\
+    \midrule
+    横の大きさ & 3840 \\
+    縦の大きさ & 2160 \\
+    フレームレート & 29.97 \\
+    総フレーム数 & 510 \\
+    長さ & 00:17 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+次に入力した画像と結果を図\ref{fig:img_1_2}に示す．
+\begin{figure}[H]
+=======
 
 次に入力した画像と結果を図\ref{fig:img_1-2}に示す．
 \begin{figure}[b]
+>>>>>>> parent of 36117c4 (考察増やした)
   \centering
   \includegraphics[width=13cm]{image/result_1_2.jpg}
   \caption{検証画像2}
@@ -561,9 +742,37 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 オブジェクトは，airplaneとtruck，personが２つ検出されている．
 画像とフレームのどちらも検出された座標が全く同じであるため，スコアが100として出力されている．
 
+<<<<<<< HEAD
+上位の検索結果を表\ref{tab:tab_1_2}に示す．
+\begin{table}[b]
+  \centering
+  \caption{\ref{fig:img_1_2}の検出結果}
+  \label{tab:tab_1_2}
+  \begin{tabular}{ccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{score}  \\
+    \midrule
+    2022-12-31 & 467 & 100.0 \\
+    2022-12-31 & 466 & 99.39 \\
+    2022-12-31 & 465 & 98.97 \\
+    2022-12-31 & 464 & 98.81 \\
+    2022-12-31 & 468 & 98.52 \\
+    2022-12-31 & 463 & 98.25 \\
+    2022-12-31 & 469 & 97.83 \\
+    2022-12-31 & 459 & 97.54 \\
+    2022-12-31 & 470 & 97.31 \\
+    2022-12-31 & 429 & 96.65 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+次に，３枚目の入力画像と結果を図\ref{fig:img_1_3}に示す．
+\begin{figure}[H]
+=======
 
 次に，３枚目の入力画像と結果を図\ref{fig:img_1-3}に示す．
 \begin{figure}[b]
+>>>>>>> parent of 36117c4 (考察増やした)
   \centering
   \includegraphics[width=13cm]{image/result_1_3.jpg}
   \caption{検証画像3}
@@ -573,7 +782,121 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 図\ref{fig:img_1-3}のでは，スコアが99.67とかなり高いスコアで検出されている．
 しかし，２つの画像を比べてみると，検出しているフレームが異なっていることがわかる．
 
+<<<<<<< HEAD
+上位の検索結果を表\ref{tab:tab_1_3}に示す．
+\begin{table}[b]
+  \centering
+  \caption{\ref{fig:img_1_3}の検出結果}
+  \label{tab:tab_1_3}
+  \begin{tabular}{ccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{score}  \\
+    \midrule
+    clock.mp4 & 283 & 99.67 \\
+    clock.mp4 & 58 & 99.22 \\
+    clock.mp4 & 8 & 99.21 \\
+    clock.mp4 & 56 & 99.17 \\
+    clock.mp4 & 187 & 99.16 \\
+    clock.mp4 & 189 & 99.09 \\
+    clock.mp4 & 52 & 99.04 \\
+    clock.mp4 & 234 & 99.0 \\
+    clock.mp4 & 2 & 98.98 \\
+    clock.mp4 & 137 & 98.93 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+これまでの表\ref{tab:tab_1_1}，表\ref{tab:tab_1_2}の出力では検出されたフレーム番号が近いものが多かったが，表\ref{tab:tab_1_3}の出力では検出されたフレーム番号が離れているものが見受けられた．
+
+次に，４枚目の入力画像と結果を図\ref{fig:img_1_4}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_1_4.jpg}
+  \caption{ディジタルヒューマンのイメージ画像}
+  \label{fig:img_1_4}
+\end{figure}
+
+この画像は，図\ref{fig:movie4}の動画内で繰り返し出現するシーンの画像である．
+図\ref{fig:img_1_4}の検出結果を表\ref{tab:tab_1_4}に示す．
+\begin{table}[b]
+  \centering
+  \caption{\ref{fig:img_1_4}の検出結果}
+  \label{tab:tab_1_4}
+  \begin{tabular}{ccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{score}  \\
+    \midrule
+    ロボット-人間-オフィス-将来-88219.mp4 & 63 & 98.01 \\
+    ロボット-人間-オフィス-将来-88219.mp4 & 149 & 97.51 \\
+    ロボット-人間-オフィス-将来-88219.mp4 & 234 & 96.47 \\
+    ロボット-人間-オフィス-将来-88219.mp4 & 62 & 96.31 \\
+    ロボット-人間-オフィス-将来-88219.mp4 & 578 & 95.62 \\
+    ロボット-人間-オフィス-将来-88219.mp4 & 496 & 88.17 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+表\ref{tab:tab_1_4}の出力では，検出されたフレーム番号が飛び飛びになっている．
+これは，図\ref{fig:img_1_4}の画像が，図\ref{fig:movie4}の動画内で繰り返し出現するシーンの画像であるためである．
+フレーム番号63と，フレーム番号149の結果を図\ref{fig:img_1_4_1}，図\ref{fig:img_1_4_2}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_1_4_1.jpg}
+  \caption{フレーム番号63の検出結果}
+  \label{fig:img_1_4_1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_1_4_2.jpg}
+  \caption{フレーム番号149の検出結果}
+  \label{fig:img_1_4_2}
+\end{figure}
+
+どちらも同じようなシーンであるが，フレーム位置が異なっているためそれぞれのフレームの結果が表\ref{tab:tab_1_4}で出力されている．
+
+
+最後に，オブジェクトが大量に映っている画像として５枚目の入力画像と結果を図\ref{fig:img_1_5}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_1_5.jpg}
+  \caption{カルーセルの様子}
+  \label{fig:img_1_5}
+\end{figure}
+
+図\ref{fig:img_1_5}では，スコアが98.54とほぼ一致したシーンの検出ができている．
+これ以外に検出された類似シーンはなかった．
+これまでと比べ，類似シーンの検索出力が少ないことがわかる．
+
+他のシーンの画像でもシーン検索が行われるか確認したい．
+その図を\ref{fig:img_1_5_1}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_1_5_1.jpg}
+  \caption{図\ref{fig:img_1_5}とは別のシーンのようす}
+  \label{fig:img_1_5_1}
+\end{figure}
+
+図\ref{fig:img_1_5_1}のように，検索の結果の出力が得られなかった．
+
+\subsection{考察}
+入力した画像と近いシーンを検索することができた．
+ほとんどの画像に対してスコアが95以上の高精度で出力されたことがわかる．
+
+図\ref{fig:img_1_4}のような，同じシーンが繰り返し存在する動画に対しても，適切な検索がなされていることがわかった．
+
+しかし，いくつか問題も見受けられた．
+まず，図\ref{fig:img_1_3}の結果である．
+検出精度がかなり高い割には，検出されたシーン（フレーム）にばらつきが見られる．
+入力された画像と針の位置が類似していないように見える．
+
+これは，この検索対象となった図\ref{fig:movie3}は，時計自体の位置は固定されており，針の位置だけが変化している動画だからこそ起こる現象であると考えられる．
+本システムの検索システムの特徴として，オブジェクトとして認識されるのは，事前に学習させたクラスのみとなっている．
+今回使用している学習済みモデルは，COCOデータセットで学習させたモデルであるため，時計の針に関するクラスは存在せず，時計自体のクラスのみが検出された．
+そのため，全てのフレームがほぼ一致しているシーンとみなされてしまっている．
+=======
 この検索対象となった図\ref{fig:movie3}は，時計自体の位置は固定されており，針の位置だけが変化しているため，全てのフレームがほぼ一致しているシーンとみなされてしまうためである．
+>>>>>>> parent of 36117c4 (考察増やした)
 
 本システムでは，検索対象がオブジェクト名と検出された座標であるため，その２つを満たしているフレームであれば，一致シーンとして出力される．
 オブジェクトの色が異なったり，オブジェクトの向きが異なったりしても，検出された座標が同じであれば，一致シーンとして出力されてしまうことがわかった．
@@ -630,6 +953,30 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 \section{位置関係を用いた検索システムについて}
 位置情報を用いた検索システムの精度についても考える．
 
+<<<<<<< HEAD
+前のセクションで用いた４つの動画に加え，図\ref{fig:movie6}も検索対象として用いる．
+図\ref{fig:movie6}は，新しい解析対象の動画として加えた，少年がスポーツカーに手を振っている様子を撮影した動画である．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/6_result.jpg}
+  \caption{少年がスポーツカーに手を振っている動画}
+  \label{fig:movie6}
+\end{figure}
+
+また，類似するシーンが存在している動画２つも検索対象として用いる（図\ref{fig:movie7}と図\ref{fig:movie8}）．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/7_result.jpg}
+  \caption{人と犬が映っている動画　その１}
+  \label{fig:movie7}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/8_result.jpg}
+  \caption{人と犬が映っている動画　その２}
+  \label{fig:movie8}
+=======
 前のセクションで用いた４つの動画に加え，図\ref{fig:movie5}も検索対象として用いる．
 図\ref{fig:movie5}は，新しい解析対象の動画として加えた，少年がスポーツカーに手を振っている様子を撮影した動画である．
 \begin{figure}[b]
@@ -637,6 +984,7 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
   \includegraphics[width=13cm]{image/5_result.jpg}
   \caption{動画5つ目}
   \label{fig:movie5}
+>>>>>>> parent of 36117c4 (考察増やした)
 \end{figure}
 
 次に入力した画像と結果を示す．
@@ -644,31 +992,93 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 まず，図\ref{fig:img_1-2}の時の，類似シーンの検索結果を図\ref{fig:img_2-1}に示す．
 \begin{figure}[b]
   \centering
+<<<<<<< HEAD
+  \caption{図\ref{fig:img_1_2}の検出結果（【角度の分散】で昇順ソート）}
+  \label{tab:tab_2_1}
+  \begin{tabular}{cccccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
+    \midrule
+    2022-12-31.mp4 & 467 & 0.0 & 1.0 & 0.0 & 0.0 \\
+    2022-12-31.mp4 & 459 & 0.13 & 0.9953 & 0.0 & 0.0069 \\
+    2022-12-31.mp4 & 464 & 0.09 & 0.9986 & 0.0 & 0.034 \\
+    2022-12-31.mp4 & 463 & 0.22 & 0.9963 & 0.0002 & 0.0493 \\
+    2022-12-31.mp4 & 453 & 0.06 & 1.2929 & 0.0002 & 0.0497 \\
+    2022-12-31.mp4 & 466 & 0.1567 & 0.9997 & 0.0001 & 0.0557 \\
+    2022-12-31.mp4 & 465 & 0.19 & 0.9995 & 0.0001 & 0.0718 \\
+    2022-12-31.mp4 & 429 & 0.7167 & 0.9858 & 0.0001 & 0.0728 \\
+    2022-12-31.mp4 & 257 & 0.2933 & 1.3556 & 0.0096 & 0.1384 \\
+    2022-12-31.mp4 & 468 & 0.3267 & 1.0025 & 0.0005 & 0.1405 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+=======
   \includegraphics[width=13cm]{image/result_2_1.jpg}
   \caption{検証結果}
   \label{fig:img_2-1}
 \end{figure}
+>>>>>>> parent of 36117c4 (考察増やした)
 
 一番上に表示されている467フレームは，前のセクションの検証画像２と同じシーンで，検出されたオブジェクトの位置関係にズレがないことがわかる．
 フレーム番号459のシーンを図\ref{fig:img_2-1-2}に示す．
 
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/result_2_1_2.jpg}
+<<<<<<< HEAD
+  \caption{図\ref{fig:img_1_2}の459フレームでの検出結果}
+  \label{fig:img_2_1_2}
+=======
   \caption{検証結果}
   \label{fig:img_2-1-2}
+>>>>>>> parent of 36117c4 (考察増やした)
 \end{figure}
 
 図\ref{fig:img_2-1-2}の左側は入力した画像で，右側は検索結果のフレームである．
 なお，それぞれのオブジェクトの中心座標を線で結んで，オブジェクトの位置関係を示しており，赤色は画像の位置関係，青色は検索結果の位置関係を示している．
 この２つの図形はほぼ一致しており，位置関係が類似していることがわかる．
+<<<<<<< HEAD
+表\ref{tab:tab_2_1}のデータより，角度の分散が$0.0069$，長さの平均が$0.9953$，傾きも$0.13$と，入力画像の位置関係とほぼ一致していることがわかる．
+=======
 図\ref{fig:img_2-1}のデータでは，角度の分散が0.0069，長さの平均が0.9953，傾きも0.125と，入力画像の位置関係とほぼ一致していることがわかる．
+>>>>>>> parent of 36117c4 (考察増やした)
 
 また，フレーム番号453のシーンを図\ref{fig:img_2-1-3}に示す．
 
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/result_2_1_3.jpg}
+<<<<<<< HEAD
+  \caption{図\ref{fig:img_1_2}の453フレームでの検出結果}
+  \label{fig:img_2_1_3}
+\end{figure}
+
+この図\ref{fig:img_2_1_3}の赤い線と青い線の関係が，相似であるかのように見える．
+表\ref{tab:tab_2_1}のデータ中で，角度の分散が$0.0497$，図形の傾きが$0.06$と小さい値の中，長さの平均が$1.2929$となっている．
+これより，図形の角度がほぼ一致しているが，図形自体の大きさが異なっていることがわかる．
+実際，図\ref{fig:img_2_1_3}では，画像よりも少し画角の引かれたシーンが類似シーンとして出力されている．
+
+また，参考として，傾きが一番大きいフレーム番号68のシーンを図\ref{fig:img_2_1_4}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_2_1_4.jpg}
+  \caption{図\ref{fig:img_1_2}の68フレームでの検出結果}
+  \label{fig:img_2_1_4}
+\end{figure}
+
+図\ref{fig:img_2_1_4}の赤い線と青い線の関係は，傾きが$6.28$と検索結果の中で最大である．
+長さの平均は$1.2675$，長さの分散は$0.0102$，角度の分散は$3.6179$となっている．
+こういった動画の中で，図形の位置関係が類似している場合は，動画内で傾いたシーンであっても検索結果として出力できることがわかった．
+
+このように，先ほどのセクションの検索では検索対象として表示されなかったシーンまで，より幅広い検索が可能となった．
+
+他の画像についても同様に検索を行った．
+
+入力した画像を図\ref{fig:img_2_2_1}に示し，検索結果上位項目を表\ref{tab:tab_2_2}に示す．
+
+\begin{figure}[H]
+=======
   \caption{検証結果}
   \label{fig:img_2-1-3}
 \end{figure}
@@ -683,14 +1093,46 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 図\ref{fig:img_2-2}に示すように，動画中から欲しいシーンを他のアプリケーションで作り，検索を行ってみる．
 なお，図\ref{fig:img_2-2}では，少年が手を振っている前を車が通過するシーンを動画中から検索するために作成した画像である．
 \begin{figure}[b]
+>>>>>>> parent of 36117c4 (考察増やした)
   \centering
   \fbox{\includegraphics[width=13cm]{image/result_2_2.jpg}}
   \caption{入力画像}
   \label{fig:img_2-2}
 \end{figure}
 
+<<<<<<< HEAD
+\begin{table}[t]
+  \centering
+  \caption{図\ref{fig:img_2_2_1}の検出結果（【図形の傾き】で昇順ソート）}
+  \label{tab:tab_2_2}
+  \begin{tabular}{cccccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
+    \midrule
+    犬をカメラ目線にして記念撮影する女性.mp4 & 162 & 0.01 & 1.0059 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 197 & 0.04 & 0.9053 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 348 & 0.04 & 0.7887 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 349 & 0.04 & 0.7825 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 169 & 0.1 & 0.8994 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 181 & 0.1 & 0.8625 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 390 & 0.18 & 0.7998 & 0.0 & 0.0 \\
+    犬を抱いてその場で回るマスクの女性.mp4 & 292 & 0.18 & 0.9966 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 129 & 0.22 & 1.6378 & 0.0 & 0.0 \\
+    犬をカメラ目線にして記念撮影する女性.mp4 & 203 & 0.23 & 0.9194 & 0.0 & 0.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+表\ref{tab:tab_2_2}中の動画タイトルに注目すると，複数の動画から類似シーンを検出していることがわかる．
+また，長さの分散と角度の分散がすべて0.0という出力になっていることもわかる．
+検出されたオブジェクトが2つのため，角度が存在しない．そのため，図形の傾きと長さの平均のみの出力となっている．
+
+図形の傾きの値が番小さい小さいフレーム番号355と，動画タイトルが他の結果と異なっているフレーム番号292の結果を図\ref{fig:img_2_2_3}，図\ref{fig:img_2_2_4}に示す．
+\begin{figure}[H]
+=======
 検索結果を図\ref{fig:img_2-2-1}に示す．
 \begin{figure}[b]
+>>>>>>> parent of 36117c4 (考察増やした)
   \centering
   \includegraphics[width=13cm]{image/result_2_2_1.jpg}
   \caption{検索結果}
@@ -709,11 +1151,74 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
   \label{fig:img_2-2-2}
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
+<<<<<<< HEAD
+  \includegraphics[width=13cm]{image/result2_2_4.jpg}
+  \caption{動画タイトルの異なっているフレーム番号292}
+  \label{fig:img_2_2_4}
+\end{figure}
+
+図\ref{fig:img_2_2_3}では，犬と女性がレンズに近づいているシーンが検出されている．
+女性と犬の図形関係で，赤い線と蒼井線（入力画像の図形と検出された図形の関係）の角度がほとんど一致しており，入力した画像とほぼ同じ構図のシーンが検出されている．
+図\ref{fig:img_2_2_3}の２枚の画像をよく比較してみると，女性の会と犬の重なりが少し違っていたり，犬の顔の位置が少し違っていたりする．
+しかし，２つのオブジェクトの位置関係がほぼ同じであるため，類似シーンとして検出された．
+
+図\ref{fig:img_2_2_4}では，入力された画像とほぼ一致しているシーンが検出されている．
+こちらの画像は，入力画像との相違点が見られない．
+オブジェクトの位置情報を用いた検索でも検出されそうなシーンでも，入力画像とフレームの類似度を計算して出力されている．
+
+このように，解析したすべての動画の中から，幅広く類似シーンの検出を行なっていることがわかる．
+
+\subsection{特殊な検索方法}
+次に，本システムの位置関係を用いた検索でしか出来ない検索方法で類似シーンの検索を行う．
+図\ref{fig:img_2_3}に示すように，動画中から欲しいシーンの構図を手作りした画像で検索を行ってみる．
+この画像は，オブジェクト間の位置関係がある程度一致していれば，厳密でなくても動画中から類似するシーンの検索が可能となる．
+なお，図\ref{fig:img_2_3}では，少年が手を振っている前を車が通過するシーンを動画中から検索するためにPowerPointで作成した画像である．
+\begin{figure}[H]
+  \centering
+  \fbox{\includegraphics[width=13cm]{image/result_2_3.jpg}}
+  \caption{入力画像}
+  \label{fig:img_2_3}
+\end{figure}
+
+検索結果を表\ref{tab:tab_2_3}に示す．
+\begin{table}[b]
+  \centering
+  \caption{図\ref{fig:img_2_3}の検出結果（【図形の傾き】で昇順ソート）}
+  \label{tab:tab_2_3}
+  \begin{tabular}{cccccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
+    \midrule
+    道路沿い.mp4 & 419 & 0.07 & 4.1498 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 418 & 0.58 & 4.3203 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 417 & 3.94 & 4.7701 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 421 & 6.31 & 3.9212 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 422 & 6.65 & 3.7456 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 190 & 10.86 & 1.0588 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 191 & 11.11 & 1.1115 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 192 & 11.21& 1.1392 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 398 & 11.24 & 3.6778 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 195 & 11.48 & 1.2486 & 0.0 & 0.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+なお，位置情報を用いた検索では検索結果が出力されなかった．
+
+表\ref{tab:tab_2_3}に示すように，図形の傾きが一番近いものは，図\ref{fig:img_2_3_1}である．
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_2_3_1.jpg}
+  \caption{図\ref{fig:img_2_2_1}のベストマッチシーン（ソート：図形の傾き）}
+  \label{fig:img_2_3_1}
+=======
   \includegraphics[width=13cm]{image/result_2_2_3.jpg}
   \caption{図\ref{fig:img_2-2-1}のベストマッチシーン（ソート：長さの平均）}
   \label{fig:img_2-2-3}
+>>>>>>> parent of 36117c4 (考察増やした)
 \end{figure}
 
 ２つのオブジェクトを結ぶ線分の傾きがほぼ一致しており，類似シーンとして出力された．
@@ -722,12 +1227,34 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 また，図\ref{fig:img_2-2-4}に示すように，長さの平均が一番近いものは，図\ref{fig:img_2-2-5}である．
 \begin{figure}[b]
   \centering
+<<<<<<< HEAD
+  \caption{図\ref{fig:img_2_3}の検出結果（【長さの平均】で昇順ソート）}
+  \label{tab:tab_2_4}
+  \begin{tabular}{cccccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
+    \midrule
+    道路沿い.mp4 & 189 & 14.19 & 1.006 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 190 & 10.86 & 1.0588 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 191 & 11.11 & 1.1115 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 192 & 11.21 & 1.1392 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 193 & 11.5 & 1.1931 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 195 & 11.48 & 1.2486 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 196 & 11.71 & 1.2752 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 197 & 12,05 & 1.3159 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 198 & 12.44 & 1.3857 & 0.0 & 0.0 \\
+    道路沿い.mp4 & 199 & 12.68 & 1.4449 & 0.0 & 0.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+=======
   \includegraphics[width=13cm]{image/result_2_2_4.jpg}
   \caption{図\ref{fig:img_2-2-1}の検出結果（ソート：長さの平均）}
   \label{fig:img_2-2-4}
 \end{figure}
+>>>>>>> parent of 36117c4 (考察増やした)
 
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/result_2_2_5.jpg}
   \caption{図\ref{fig:img_2-2-1}のベストマッチシーン（ソート：長さの平均）}
@@ -737,8 +1264,13 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 ２つのオブジェクトの長さの平均がほぼ一致しており，類似シーンとして出力された．
 スポーツカーが人の前を通過しているシーンが出力されている．
 
+<<<<<<< HEAD
+なお，検索の目的であった，少年がスポーツカーに対して手を振っているシーンは，表\ref{tab:tab_2_4}中の，フレーム番号193あたりで見つけることができた（図\ref{fig:img_2_3_3}）．
+\begin{figure}[H]
+=======
 なお，検索の目的であった，少年がスポーツカーに対して手を振っているシーンは，図\ref{fig:img_2-2-4}中の，フレーム番号193あたりで見つけることができた（図\ref{fig:img_2-2-6}）．
 \begin{figure}[b]
+>>>>>>> parent of 36117c4 (考察増やした)
   \centering
   \includegraphics[width=13cm]{image/result_2_2_6.jpg}
   \caption{目的のシーン}
@@ -747,6 +1279,192 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 
 このような目的のシーンのオブジェクト構成がある場合は，そのシーンを動画の中から検索することが可能となっている．
 
+<<<<<<< HEAD
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_2_4.PNG}
+  \caption{PowerPointで作成した入力画像}
+  \label{fig:img_2_4}
+\end{figure}
+
+
+この画像を入力として検索してみたところ，結果は出力されなかった．
+図\ref{fig:movie1}の動画がどういった解析で何が検出されているのかを調べたところ，表\ref{tab:tab_2_5}のようになっていた．
+\begin{table}[b]
+  \centering
+  \caption{図\ref{fig:img_2_4}の解析結果}
+  \label{tab:tab_2_5}
+  \begin{tabular}{cc}
+    \toprule
+    \thead{オブジェクト名} & \thead{認識率[\%]}  \\
+    \midrule
+    person & 99.94 \\
+    person & 99.9 \\
+    skateboard & 98.26 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+他のフレームでも基本的に同様の結果となった．
+そのため，personとskateboardを使った画像を入力にした場合に，類似シーンが検索されると考えられる．
+図\ref{fig:img_2_4_2}のように，personとskateboardを使用した画像を入力にした結果，表\ref{tab:tab_2_6}のようになった．
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{image/result_2_4_2.PNG}
+  \caption{PowerPointで作成した入力画像}
+  \label{fig:img_2_4_2}
+\end{figure}
+
+\begin{table}[b]
+  \centering
+  \caption{図\ref{fig:img_2_4_2}の検出結果（【図形の傾き】で昇順ソート）}
+  \label{tab:tab_2_6}
+  \begin{tabular}{cccccc}
+    \toprule
+    \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
+    \midrule
+    production ID\_4265040.mp4 & 356 & 8.25 & 1.1921 & 0.0055 & 10.7487 \\
+    production ID\_4265040.mp4 & 357 & 8.58 & 1.2108 & 0.0071 & 10.8384 \\
+    production ID\_4265040.mp4 & 358 & 8.67 & 1.224 & 0.0114 & 13.5234 \\
+    production ID\_4265040.mp4 & 355 & 7.445 & 1.1973 & 0.0043 & 13.7131 \\
+    production ID\_4265040.mp4 & 352 & 6.385 & 1.1459 & 0.0022 & 15.7873 \\
+    production ID\_4265040.mp4 & 354 & 6.98 & 1.1819 & 0.0004 & 17.1475 \\
+    production ID\_4265040.mp4 & 359 & 8.895 & 1.2697 & 0.0164 & 17.6553 \\
+    production ID\_4265040.mp4 & 345 & 5.655 & 1.0659 & 0.0014 & 17.9837 \\
+    production ID\_4265040.mp4 & 353 & 6.73 & 1.1585 & 0.0034 & 18..0178 \\
+    production ID\_4265040.mp4 & 344 & 5.655 & 1.0544 & 0.0028 & 18.629 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+表\ref{tab:tab_2_6}のように，多くの類似シーンの検出ができた．
+図形の傾きが一番小さい356フレーム目の検出結果を図\ref{fig:img_2_4_3}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image/result_2_4_3.jpg}
+  \caption{図\ref{fig:img_2_4}の検出結果（フレーム番号：356）}
+  \label{fig:img_2_4_3}
+\end{figure}
+
+このように，動画内に目的のシーンのオブジェクト構成がわかる場合は，そのシーンを動画の中から検索することが可能となっている．
+
+\subsection{考察}
+画像に一致している動画だけでなく，画像および動画内のオブジェクトの関係性を考慮して検索を行うことで，より幅広い検索が可能となった．
+
+しかし，充分に使いやすい機能とは言えないと考える．
+それは，検索結果の出力である．
+
+図\ref{fig:img_2_3}での検索結果が非常にわかりずらい．
+何でソートすると最も類似したシーンになるのか，目的のシーンになるのかが不明瞭であるためである．
+現在，ソート機能では，図形の傾きや角度の分散など，１項目に限って行える．
+しかし，ある場面では角度の分散と長さの平均の２項目をソートに利用したい場合もある．
+こういった場面に対応できていないため，検索結果の出力については改善の余地があると考える．
+
+また，図\ref{fig:img_2_3}のような，検出されたオブジェクト数が２つ場合は，３つ以上と比べて検索機能が不十分であると考える．
+３つ以上のオブジェクト時には，必ずオブジェクト関係間で内角が存在するため，内角の分散を考慮することができる．
+しかし，２つのオブジェクトの場合は，内角が存在しないため，内角の分散を考慮することができない．
+また，辺も１つしかないため，辺の長さの分散も考慮することができない．
+そのため，２つのオブジェクトの場合は，図形の傾きと長さの平均のみしか考慮できず，目的のシーンの検索が難しいと考える．
+オブジェクトが１つの場合は，図形の傾き，長さの平均，長さの分散，角度の分散の全てを計算することができず，類似シーンの検索には，オブジェクト名の一致のみが考慮される．
+これらの問題点を解決するために，オブジェクト数に応じて，検索機能を改善する必要があると考える．
+
+オブジェクトが大量に画像内に存在する場合の，図形の計算についても考察する．
+本システムの図形の計算では，\ref{sec:search_relationship}で説明したとおりである．
+図形のオブジェクトを描画するために，オブジェクトの点を全て通りながら外周を描くようなルートを計算している．
+オブジェクトの数が少ない場合は，図\ref{fig:img_2_4_4}のように，図形が正しく描画できる．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image/result_2_4_4.png}
+  \caption{オブジェクトが４つの図形の描画}
+  \label{fig:img_2_4_4}
+\end{figure}
+
+しかし，オブジェクトが９個ある場合，図\ref{fig:img_2_4_5}のように，図形が正しく描画されていない．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image/result_2_4_5.png}
+  \caption{オブジェクトが９つの図形の描画}
+  \label{fig:img_2_4_5}
+\end{figure}
+
+図形が図\ref{fig:img_2_4_4}のように単純な図形であれば本システムの図形の計算でも問題ないが，
+複雑な図形の場合は正しく図形を描画することができないことがあることがわかった．
+
+類似シーンの検索精度向上には，この図形の計算の改善が必要であると考える．
+
+\section{全体を通しての考察}
+
+繰り返し本システムを利用した結果，検索結果の表示までにかかる時間が長いことが分かった．
+
+データベースと処理時間の関係について検証を行った．
+まず，動画解析にかかる時間を調べた．
+その結果を図\ref{fig:img_2_5}に示す．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image/result_2_5.png}
+  \caption{DBサイズと検出時間の関係}
+  \label{fig:img_2_5}
+\end{figure}
+
+図\ref{fig:img_2_5}の横軸には対数をとったデータベースのサイズを，縦軸には動画解析にかかる時間を示す．
+動画解析の結果をデータベースに登録する際には，データベースのサイズに関わらず，オブジェクトあたりの解析時間はほぼ一定であることがわかった．
+
+次に，検索時間について調べた．
+位置情報を使用した検索にかかる時間を図\ref{fig:img_2_5_2}に，位置関係を使用した検索にかかる時間を図\ref{fig:img_2_5_3}に示す．
+検索には画像内のオブジェクト数が異なる２種類の画像を使用した．
+１枚目の画像は，画像内に３つのオブジェクトが存在する．
+２枚目の画像は，画像内に８つのオブジェクトが存在する．
+これにより，オブジェクト数によって検索時間がどのように変化するかもを調べた．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image/result_2_5_2.png}
+  \caption{DBサイズと検索時間の関係(位置情報を使用)}
+  \label{fig:img_2_5_2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image/result_2_5_3.png}
+  \caption{DBサイズと検索時間の関係(位置関係を使用)}
+  \label{fig:img_2_5_3}
+\end{figure}
+
+図\ref{fig:img_2_5_2}，図\ref{fig:img_2_5_3}の横軸はデータベースのサイズ，縦軸はデータベースにアクセスする時間をアクセスした回数で割った『１データを取得するのにかかる時間(トランザクションタイム)』である．
+トランザクションタイムの計算式は，以下の通りである．
+\begin{equation}
+  トランザクション時間[ms] = \frac{データベースにアクセスした時間[ms]}{データベースにアクセスした回数[times]}
+\end{equation}
+
+これらの図を見ると，データベースのサイズが増加すると，データベースにアクセスする時間（トランザクションタイム）が増加していることがわかった．
+特に，データベースのサイズが2,000KBまではトランザクションタイムが非常に短い．
+その後は，サイズに比例してトランザクションタイムが急激に増加している．
+また，画像内のオブジェクトの数によって，トランザクションタイムが変化していることがわかった．
+図\ref{fig:img_2_5_2}，図\ref{fig:img_2_5_3}とも，画像内のオブジェクト数が少ない方がトランザクションタイムが短い．
+
+位置情報や位置関係を使用した検索方法別のトランザクションタイムの比較，どちらもあまり差がないことがわかった．
+
+以上のことから，動画解析にかかる時間はデータベースのサイズに関係なく一定であるが，動画検索にかかる時間はデータベースのサイズに比例して増加していることがわかった．
+
+検索時間を減らすためには，データベースに保存するデータ数の削減や，データベースとやり取りを行う回数（トランザクション回数）の削減などを行う必要があると考える．
+
+また，別の問題もある．
+それは，学習済みオブジェクト検出モデルを使用しているため，そのモデルで検出できないオブジェクトがあると，検索結果に表示されないことである．
+これは従来のRGB値やヒストグラムを使用した比較の時には生じない．
+どのような映像であろうと，RGB値やヒストグラムを比較することで，同一シーンの瞬間を検索することができる．
+
+しかし，今回使用している学習済みモデルは，\ref{sec:system}節でも触れているがCOCOデータセットを使用しているため，そのデータセットに含まれていないオブジェクトは検出できない．
+オブジェクトが検出できないと，同一シーンだけでなく，類似シーンの検索結果も表示されない．
+
+この問題を解決するには，目的にあった学習済みモデルを使用する必要がある．
+例えば，ゲーム画面に特化した検索システムを構築する場合，ゲーム画面のデータセットを用いてモデルを学習させた方が検索システムの精度が向上すると考えられる．
+また，将棋の駒を学習データとしてモデルを作成すると，将棋の特定の盤面を検索することも可能であると考える．
+
+今回使用しているDetectron2には，カスタムデータセットから推論を行う機能があるため，アノテーションデータが用意できれば，オリジナルのモデルを作成することも可能である．
+
+一般的な映像を検索するシステムの構築を目標とした本研究では，Detectron2の学習済みモデルを使用しているが，今後は目的に合わせた学習済みモデルを使用することで，より高い精度の検索システムを構築することができると考える．
+=======
+>>>>>>> parent of 36117c4 (考察増やした)
 
 \section{まとめ}
 位置情報を用いた検索システムと，位置関係を用いた検索システムのそれぞれの動作と結果について考察を行った．
@@ -872,7 +1590,7 @@ x,y座標で実際の値を使用した例を図\ref{fig:compare}に記載する
 \bibitem{google_data} 月間6,500万ユーザーを超えたYouTube，2020年の国内利用実態──テレビでの利用も2倍に, Google https://www.thinkwithgoogle.com/intl/ja-jp/marketing-strategies/video/youtube-recap2020-2/
 \bibitem{cnn} A Comprehensive Guide to Convolutional Neural Networks — the ELI5 way, Towards Data Science https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53
 \bibitem{detectron2} Detectron2,Meta AI https://ai.facebook.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-/
-\bibitem{coco} Microsoft COCO: Common Objects in Context, Microsoft https://cocodataset.org/#home
+\bibitem{coco} Microsoft COCO: Common Objects in Context, Microsoft https://cocodataset.org/
 
 \end{thebibliography}
 
