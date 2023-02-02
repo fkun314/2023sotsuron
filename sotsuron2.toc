@@ -6,34 +6,37 @@
 \contentsline {section}{\numberline {2.1}はじめに}{5}{}%
 \contentsline {section}{\numberline {2.2}ニューラルネットワーク}{5}{}%
 \contentsline {subsection}{\numberline {2.2.1}人工ニューロン}{5}{}%
-\contentsline {subsection}{\numberline {2.2.2}ニューラルネットワーク}{7}{}%
+\contentsline {subsection}{\numberline {2.2.2}ニューラルネットワーク}{6}{}%
 \contentsline {subsection}{\numberline {2.2.3}学習について}{7}{}%
-\contentsline {subsection}{\numberline {2.2.4}誤差逆伝播法}{8}{}%
-\contentsline {section}{\numberline {2.3}ディープラーニング(深層学習)}{10}{}%
-\contentsline {section}{\numberline {2.4}CNN(Convolutional Neural Network)}{10}{}%
-\contentsline {chapter}{\numberline {第3章}動画解析システムについて}{12}{}%
-\contentsline {section}{\numberline {3.1}はじめに}{12}{}%
-\contentsline {section}{\numberline {3.2}使用するライブラリについて}{12}{}%
-\contentsline {section}{\numberline {3.3}システム全体の構築と動作について}{13}{}%
-\contentsline {subsection}{\numberline {3.3.1}データベースの作成について}{14}{}%
+\contentsline {subsection}{\numberline {2.2.4}誤差逆伝播法}{7}{}%
+\contentsline {section}{\numberline {2.3}ディープラーニング(深層学習)}{9}{}%
+\contentsline {section}{\numberline {2.4}CNN(Convolutional Neural Network)}{9}{}%
+\contentsline {chapter}{\numberline {第3章}動画解析システムについて}{11}{}%
+\contentsline {section}{\numberline {3.1}はじめに}{11}{}%
+\contentsline {section}{\numberline {3.2}`}{11}{}%
+\contentsline {section}{\numberline {3.3}システム全体の構築と動作について}{12}{}%
+\contentsline {subsection}{\numberline {3.3.1}データベースの作成について}{13}{}%
 \contentsline {subsection}{\numberline {3.3.2}データベースの利用について}{15}{}%
-\contentsline {section}{\numberline {3.4}オブジェクトの位置情報を用いた検索システムについて}{16}{}%
-\contentsline {section}{\numberline {3.5}オブジェクトの位置関係を用いた検索システムについて}{18}{}%
-\contentsline {section}{\numberline {3.6}まとめ}{23}{}%
-\contentsline {chapter}{\numberline {第4章}動作検証と考察}{24}{}%
-\contentsline {section}{\numberline {4.1}位置情報を用いた検索システムについて}{24}{}%
-\contentsline {subsection}{\numberline {4.1.1}考察}{34}{}%
-\contentsline {section}{\numberline {4.2}位置関係を用いた検索システムについて}{35}{}%
-\contentsline {subsection}{\numberline {4.2.1}特殊な検索方法}{42}{}%
-\contentsline {subsection}{\numberline {4.2.2}考察}{48}{}%
-\contentsline {section}{\numberline {4.3}全体を通しての考察}{50}{}%
-\contentsline {section}{\numberline {4.4}まとめ}{53}{}%
-\contentsline {chapter}{\numberline {第5章}結論}{54}{}%
-\contentsline {chapter}{\numberline {第6章}使用方法}{55}{}%
-\contentsline {section}{\numberline {6.1}ユーザ登録}{55}{}%
-\contentsline {section}{\numberline {6.2}ログイン}{55}{}%
-\contentsline {section}{\numberline {6.3}動画のアップロードについて}{55}{}%
-\contentsline {section}{\numberline {6.4}画像を用いた検索について}{58}{}%
-\contentsline {section}{\numberline {6.5}まとめ}{60}{}%
-\contentsline {chapter}{謝辞}{61}{}%
-\contentsline {chapter}{参考文献}{62}{}%
+\contentsline {section}{\numberline {3.4}オブジェクトの位置情報を用いた検索システムについて}{15}{}%
+\contentsline {section}{\numberline {3.5}オブジェクトの位置関係を用いた検索システムについて}{17}{}%
+\contentsline {subsection}{\numberline {3.5.1}類似シーンの検索}{20}{}%
+\contentsline {section}{\numberline {3.6}まとめ}{22}{}%
+\contentsline {chapter}{\numberline {第4章}動作検証と考察}{23}{}%
+\contentsline {section}{\numberline {4.1}はじめに}{23}{}%
+\contentsline {section}{\numberline {4.2}位置情報を用いた検索システムについて}{23}{}%
+\contentsline {subsection}{\numberline {4.2.1}考察}{32}{}%
+\contentsline {section}{\numberline {4.3}位置関係を用いた検索システムについて}{33}{}%
+\contentsline {subsection}{\numberline {4.3.1}特殊な検索方法}{40}{}%
+\contentsline {subsection}{\numberline {4.3.2}考察}{45}{}%
+\contentsline {section}{\numberline {4.4}全体を通しての考察}{47}{}%
+\contentsline {section}{\numberline {4.5}まとめ}{50}{}%
+\contentsline {chapter}{\numberline {第5章}結論}{51}{}%
+\contentsline {chapter}{\numberline {第6章}使用方法}{52}{}%
+\contentsline {section}{\numberline {6.1}ユーザ登録}{52}{}%
+\contentsline {section}{\numberline {6.2}ログイン}{53}{}%
+\contentsline {section}{\numberline {6.3}動画のアップロードについて}{53}{}%
+\contentsline {section}{\numberline {6.4}動画データの情報表示}{55}{}%
+\contentsline {section}{\numberline {6.5}画像を用いた検索について}{56}{}%
+\contentsline {section}{\numberline {6.6}まとめ}{59}{}%
+\contentsline {chapter}{謝辞}{60}{}%
+\contentsline {chapter}{参考文献}{61}{}%

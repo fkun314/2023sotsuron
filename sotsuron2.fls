@@ -510,10 +510,10 @@ INPUT ./image/table_list.png
 INPUT ./image/table_list.png
 INPUT image/table_list.png
 INPUT extractbb -B cropbox -O image/table_list.png
-INPUT ./image/compare.jpg
-INPUT ./image/compare.jpg
-INPUT image/compare.jpg
-INPUT extractbb -B cropbox -O image/compare.jpg
+INPUT ./image/compare.png
+INPUT ./image/compare.png
+INPUT image/compare.png
+INPUT extractbb -B cropbox -O image/compare.png
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT ./image/object_relationship.png
 INPUT ./image/object_relationship.png
@@ -676,6 +676,26 @@ INPUT ./image/movie_upload.jpg
 INPUT ./image/movie_upload.jpg
 INPUT image/movie_upload.jpg
 INPUT extractbb -B cropbox -O image/movie_upload.jpg
+INPUT ./image/home.jpg
+INPUT ./image/home.jpg
+INPUT image/home.jpg
+INPUT extractbb -B cropbox -O image/home.jpg
+INPUT ./image/preparation.jpg
+INPUT ./image/preparation.jpg
+INPUT image/preparation.jpg
+INPUT extractbb -B cropbox -O image/preparation.jpg
+INPUT ./image/ongoing.jpg
+INPUT ./image/ongoing.jpg
+INPUT image/ongoing.jpg
+INPUT extractbb -B cropbox -O image/ongoing.jpg
+INPUT ./image/complete.jpg
+INPUT ./image/complete.jpg
+INPUT image/complete.jpg
+INPUT extractbb -B cropbox -O image/complete.jpg
+INPUT ./image/detail.jpg
+INPUT ./image/detail.jpg
+INPUT image/detail.jpg
+INPUT extractbb -B cropbox -O image/detail.jpg
 INPUT ./image/image_upload.jpg
 INPUT ./image/image_upload.jpg
 INPUT image/image_upload.jpg
