@@ -676,10 +676,6 @@ INPUT ./image/movie_upload.jpg
 INPUT ./image/movie_upload.jpg
 INPUT image/movie_upload.jpg
 INPUT extractbb -B cropbox -O image/movie_upload.jpg
-INPUT ./image/home.jpg
-INPUT ./image/home.jpg
-INPUT image/home.jpg
-INPUT extractbb -B cropbox -O image/home.jpg
 INPUT ./image/preparation.jpg
 INPUT ./image/preparation.jpg
 INPUT image/preparation.jpg

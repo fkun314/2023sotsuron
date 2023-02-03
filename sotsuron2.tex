@@ -49,7 +49,7 @@
   \vspace{55.15mm}
   \null
   % 研究題目\\
-  {\Large CNNを用いた動画インデックス作成に関する研究}\\
+  {\Large CNNを用いた動画検索用インデックス作成に関する研究}\\
   %\vfill \vfill
   %\vfill
   
@@ -59,8 +59,8 @@
   
   \large
   総合工学科 情報システムコース 5年\\[1mm]
-  1801113 藤田　晴斗\\[1mm]
-  指導教員 総合工学科 藤原　和彦\\
+  1801113 藤田 晴斗\\[1mm]
+  指導教員 総合工学科 藤原 和彦\\
   
   \vspace{16mm}
   {仙台高等専門学校}
@@ -281,13 +281,18 @@ CNNとは，畳み込みニューラルネットワークとも呼ばれ，画�
 
 最後に，全結合層(Fully Connected Layer)で情報を縮約することで，ニューラルネットワークの処理が容易になる．
 
+\section{まとめ}
+本システムで取り扱っている画像処理アルゴリズムと，CNNを中心としたディープラーニングについて説明した．
 \clearpage
-\chapter{動画解析システムについて}\label{sec:system}
+\chapter{動画解析システムについて}
+\label{sec:system}
 
-\section{はじめに}\label{chap3-1}
+\section{はじめに}
+\label{chap3-1}
 本章では，本システムの動画解析システムについて説明する．
 
-\section`{使用するライブラリについて}\label{chap3-2}
+\section{使用するライブラリについて}
+\label{chap3-2}
 本研究ではFacebook AI Research(FAIR)が公表したDetectron2を使用する．
 Detectron2とは，高機能な物体検出およびセグメンテーション機能を有する次世代ライブラリである\cite{detectron2}．
 特徴としては，モデルの訓練速度が非常に高速であること，物体の検出数が多いことが挙げられる．
@@ -543,7 +548,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 
 以上の処理を入力された画像および動画の各フレームに対して行うことで，類似シーンの検索を行うことができる．
 
-\subsection{類似シーンの検索}\label{chap3-5-1}
+
 次に，最短経路で結ぶ順番でソートされたオブジェクトのリストを用いて，類似シーンの検索を行う．
 
 入力された画像と動画のフレームが類似しているかを判定する基準として，以下の４つを用いる．
@@ -715,16 +720,16 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
     \toprule
     \thead{動画タイトル} & \thead{対象フレーム} & \thead{score}  \\
     \midrule
-    2022-12-31 & 467 & 100.0 \\
-    2022-12-31 & 466 & 99.39 \\
-    2022-12-31 & 465 & 98.97 \\
-    2022-12-31 & 464 & 98.81 \\
-    2022-12-31 & 468 & 98.52 \\
-    2022-12-31 & 463 & 98.25 \\
-    2022-12-31 & 469 & 97.83 \\
-    2022-12-31 & 459 & 97.54 \\
-    2022-12-31 & 470 & 97.31 \\
-    2022-12-31 & 429 & 96.65 \\
+    2022-12-31.mp4 & 467 & 100.0 \\
+    2022-12-31.mp4 & 466 & 99.39 \\
+    2022-12-31.mp4 & 465 & 98.97 \\
+    2022-12-31.mp4 & 464 & 98.81 \\
+    2022-12-31.mp4 & 468 & 98.52 \\
+    2022-12-31.mp4 & 463 & 98.25 \\
+    2022-12-31.mp4 & 469 & 97.83 \\
+    2022-12-31.mp4 & 459 & 97.54 \\
+    2022-12-31.mp4 & 470 & 97.31 \\
+    2022-12-31.mp4 & 429 & 96.65 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -979,16 +984,16 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
     \toprule
     \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
     \midrule
-    犬をカメラ目線にして記念撮影する女性.mp4 & 162 & 0.01 & 1.0059 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 197 & 0.04 & 0.9053 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 348 & 0.04 & 0.7887 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 349 & 0.04 & 0.7825 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 169 & 0.1 & 0.8994 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 181 & 0.1 & 0.8625 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 390 & 0.18 & 0.7998 & 0.0 & 0.0 \\
-    犬を抱いてその場で回るマスクの女性.mp4 & 292 & 0.18 & 0.9966 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 129 & 0.22 & 1.6378 & 0.0 & 0.0 \\
-    犬をカメラ目線にして記念撮影する女性.mp4 & 203 & 0.23 & 0.9194 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 162 & 0.01 & 1.0059 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 197 & 0.04 & 0.9053 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 348 & 0.04 & 0.7887 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 349 & 0.04 & 0.7825 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 169 & 0.1 & 0.8994 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 181 & 0.1 & 0.8625 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 390 & 0.18 & 0.7998 & 0.0 & 0.0 \\
+    犬を抱いて$\cdots$.mp4 & 292 & 0.18 & 0.9966 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 129 & 0.22 & 1.6378 & 0.0 & 0.0 \\
+    犬をカメラ$\cdots$.mp4 & 203 & 0.23 & 0.9194 & 0.0 & 0.0 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -1013,7 +1018,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 \end{figure}
 
 図\ref{fig:img_2_2_3}では，犬と女性がレンズに近づいているシーンが検出されている．
-女性と犬の図形関係で，赤い線と蒼井線（入力画像の図形と検出された図形の関係）の角度がほとんど一致しており，入力した画像とほぼ同じ構図のシーンが検出されている．
+女性と犬の図形関係で，赤い線と青い線（入力画像の図形と検出された図形の関係）の角度がほとんど一致しており，入力した画像とほぼ同じ構図のシーンが検出されている．
 図\ref{fig:img_2_2_3}の２枚の画像をよく比較してみると，女性の会と犬の重なりが少し違っていたり，犬の顔の位置が少し違っていたりする．
 しかし，２つのオブジェクトの位置関係がほぼ同じであるため，類似シーンとして検出された．
 
@@ -1027,7 +1032,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 次に，本システムの位置関係を用いた検索でしか出来ない検索方法で類似シーンの検索を行う．
 図\ref{fig:img_2_3}に示すように，動画中から欲しいシーンの構図を手作りした画像で検索を行ってみる．
 この画像は，オブジェクト間の位置関係がある程度一致していれば，厳密でなくても動画中から類似するシーンの検索が可能となる．
-なお，図\ref{fig:img_2_3}では，少年が手を振っている前を車が通過するシーンを動画中から検索するためにPowerPointで作成した画像である．
+なお，図\ref{fig:img_2_3}では，少年が手を振っている前を車が通過するシーンを，動画中から検索するためにPowerPointで作成した画像である．
 \begin{figure}[H]
   \centering
   \fbox{\includegraphics[width=13cm]{image/result_2_3.jpg}}
@@ -1161,16 +1166,16 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
     \toprule
     \thead{動画タイトル} & \thead{対象フレーム} & \thead{図形の傾き} & \thead{長さの平均} & \thead{長さの分散} & \thead{角度の分散} \\
     \midrule
-    production ID\_4265040.mp4 & 356 & 8.25 & 1.1921 & 0.0055 & 10.7487 \\
-    production ID\_4265040.mp4 & 357 & 8.58 & 1.2108 & 0.0071 & 10.8384 \\
-    production ID\_4265040.mp4 & 358 & 8.67 & 1.224 & 0.0114 & 13.5234 \\
-    production ID\_4265040.mp4 & 355 & 7.445 & 1.1973 & 0.0043 & 13.7131 \\
-    production ID\_4265040.mp4 & 352 & 6.385 & 1.1459 & 0.0022 & 15.7873 \\
-    production ID\_4265040.mp4 & 354 & 6.98 & 1.1819 & 0.0004 & 17.1475 \\
-    production ID\_4265040.mp4 & 359 & 8.895 & 1.2697 & 0.0164 & 17.6553 \\
-    production ID\_4265040.mp4 & 345 & 5.655 & 1.0659 & 0.0014 & 17.9837 \\
-    production ID\_4265040.mp4 & 353 & 6.73 & 1.1585 & 0.0034 & 18..0178 \\
-    production ID\_4265040.mp4 & 344 & 5.655 & 1.0544 & 0.0028 & 18.629 \\
+    production$\cdots$.mp4 & 356 & 8.25 & 1.1921 & 0.0055 & 10.7487 \\
+    production$\cdots$.mp4 & 357 & 8.58 & 1.2108 & 0.0071 & 10.8384 \\
+    production$\cdots$.mp4 & 358 & 8.67 & 1.224 & 0.0114 & 13.5234 \\
+    production$\cdots$.mp4 & 355 & 7.445 & 1.1973 & 0.0043 & 13.7131 \\
+    production$\cdots$.mp4 & 352 & 6.385 & 1.1459 & 0.0022 & 15.7873 \\
+    production$\cdots$.mp4 & 354 & 6.98 & 1.1819 & 0.0004 & 17.1475 \\
+    production$\cdots$.mp4 & 359 & 8.895 & 1.2697 & 0.0164 & 17.6553 \\
+    production$\cdots$.mp4 & 345 & 5.655 & 1.0659 & 0.0014 & 17.9837 \\
+    production$\cdots$.mp4 & 353 & 6.73 & 1.1585 & 0.0034 & 18..0178 \\
+    production$\cdots$.mp4 & 344 & 5.655 & 1.0544 & 0.0028 & 18.629 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -1179,7 +1184,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 図形の傾きが一番小さい356フレーム目の検出結果を図\ref{fig:img_2_4_3}に示す．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{image/result_2_4_3.jpg}
+  \includegraphics[width=13cm]{image/result_2_4_3.jpg}
   \caption{図\ref{fig:img_2_4}の検出結果（フレーム番号：356）}
   \label{fig:img_2_4_3}
 \end{figure}
@@ -1209,18 +1214,18 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 オブジェクトが大量に画像内に存在する場合の，図形の計算についても考察する．
 本システムの図形の計算では，\ref{sec:search_relationship}で説明したとおりである．
 図形のオブジェクトを描画するために，オブジェクトの点を全て通りながら外周を描くようなルートを計算している．
-オブジェクトの数が少ない場合は，図\ref{fig:img_2_4_4}のように，図形が正しく描画できる．
+現在の計算において，オブジェクトの数が少ない場合は，図\ref{fig:img_2_4_4}のように，図形が正しく描画できる．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{image/result_2_4_4.png}
+  \includegraphics[width=13cm]{image/result_2_4_4.png}
   \caption{オブジェクトが４つの図形の描画}
   \label{fig:img_2_4_4}
 \end{figure}
 
-しかし，オブジェクトが９個ある場合，図\ref{fig:img_2_4_5}のように，図形が正しく描画されていない．
+しかし，オブジェクトが多数ある場合，例えば図\ref{fig:img_2_4_5}（オブジェクトの数が９つ）のように，図形が正しく描画されていない．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{image/result_2_4_5.png}
+  \includegraphics[width=13cm]{image/result_2_4_5.png}
   \caption{オブジェクトが９つの図形の描画}
   \label{fig:img_2_4_5}
 \end{figure}
@@ -1229,6 +1234,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 複雑な図形の場合は正しく図形を描画することができないことがあることがわかった．
 
 類似シーンの検索精度向上には，この図形の計算の改善が必要であると考える．
+特に，グラフ理論などを用いることでより正しい計算ができるようになるのではないか．
 
 \section{全体を通しての考察}\label{chap4-4}
 
@@ -1239,7 +1245,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 その結果を図\ref{fig:img_2_5}に示す．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{image/result_2_5.png}
+  \includegraphics[width=13cm]{image/result_2_5.png}
   \caption{DBサイズと検出時間の関係}
   \label{fig:img_2_5}
 \end{figure}
@@ -1255,19 +1261,19 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 これにより，オブジェクト数によって検索時間がどのように変化するかもを調べた．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{image/result_2_5_2.png}
+  \includegraphics[width=13cm]{image/result_2_5_2.png}
   \caption{DBサイズと検索時間の関係(位置情報を使用)}
   \label{fig:img_2_5_2}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{image/result_2_5_3.png}
+  \includegraphics[width=13cm]{image/result_2_5_3.png}
   \caption{DBサイズと検索時間の関係(位置関係を使用)}
   \label{fig:img_2_5_3}
 \end{figure}
 
-図\ref{fig:img_2_5_2}，図\ref{fig:img_2_5_3}の横軸はデータベースのサイズ，縦軸はデータベースにアクセスする時間をアクセスした回数で割った『データ一つを取得するのにかかる時間(トランザクションタイム)』である．
+図\ref{fig:img_2_5_2}，図\ref{fig:img_2_5_3}の横軸はデータベースのサイズ，縦軸はデータベースにアクセスする時間をアクセスした回数で割った『データ１つを取得するのにかかる時間(トランザクションタイム)』である．
 トランザクションタイムの計算式は，以下の通りである．
 \begin{equation}
   トランザクション時間[ms] = \frac{データベースにアクセスした時間[ms]}{データベースにアクセスした回数[times]}
@@ -1358,13 +1364,13 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/index.jpg}
-  \caption{動画アップロード画面遷移前}
+  \caption{トップ画面}
   \label{fig:index}
 \end{figure}
 
 次に遷移後のアップロード画面を図\ref{fig:movie_upload}に示す．
 
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/movie_upload.jpg}
   \caption{動画アップロード画面遷移後}
@@ -1377,17 +1383,11 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 なお，動画のアップロードが正しく完了していれば，解析待ちや解析中であってもブラウザを更新したり閉じたりしても動画には影響はない．
 
 \section{動画データの情報表示}
-動画アップロードが完了した動画は，図\ref{fig:home}の『動画一覧』で一覧表示される．
-\begin{figure}[b]
-  \centering
-  \includegraphics[width=13cm]{image/home.jpg}
-  \caption{トップ画面}
-  \label{fig:home}
-\end{figure}
+動画アップロードが完了した動画は，トップ画面（図\ref{fig:index}）の『動画一覧』で一覧表示される．
 
 動画一覧，動画の解析状況および動画の解析結果を確認できる．
 動画の解析が始まっていない時は，図\ref{fig:preparation}のように表示される．
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/preparation.jpg}
   \caption{動画リスト（解析前）}
@@ -1395,7 +1395,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 \end{figure}
 
 動画は自動的に解析が行われる．画面を更新すると最新の解析状況を確認することができる（図\ref{fig:ongoing}）．
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/ongoing.jpg}
   \caption{動画リスト（解析中）}
@@ -1404,7 +1404,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 
 解析が完了した動画は，図\ref{fig:complete}のように『解析済み』と表示される．
 また，『詳細』ボタンが押せるようになり，解析状況を確認できる．
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/complete.jpg}
   \caption{動画リスト（解析済み）}
@@ -1412,7 +1412,7 @@ UUID (Universally Unique Identifier) とは，一意な識別子のことであ�
 \end{figure}
 
 詳細ボタンを押すと，図\ref{fig:detail}のようなページに遷移する．
-\begin{figure}[b]
+\begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{image/detail.jpg}
   \caption{動画データ}

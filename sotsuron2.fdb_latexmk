@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1675338895 "sotsuron2.dvi" "sotsuron2.pdf" "sotsuron2" 1675338899
-  "sotsuron2.dvi" 1675338895 141756 669acb4e50cf08e465921dc9520b79af "latex"
+["dvipdf"] 1675414876 "sotsuron2.dvi" "sotsuron2.pdf" "sotsuron2" 1675414880
+  "sotsuron2.dvi" 1675414876 142000 b48b01d0e4d67a8b0b02fb1607d0b41a "latex"
   (generated)
   "sotsuron2.pdf"
-["latex"] 1675338890 "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" "sotsuron2.dvi" "sotsuron2" 1675338899
-  "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" 1675338847 82589 5cbd2674ce2d18be2431e086633b4f77 ""
+["latex"] 1675414871 "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" "sotsuron2.dvi" "sotsuron2" 1675414880
+  "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" 1675414860 82414 d27c3ef14056faac6a1f9c3b3bd5e521 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -99,7 +99,6 @@
   "image/figure_2.png" 1674690818 260608 c36442a73230751a1630b1e9ee53b057 ""
   "image/flow.png" 1674173623 115426 a9add5eaefc5312cd58243b1d7681c2f ""
   "image/hikaku.png" 1674001436 1416532 1eeb80d063935a50f2eae1f36d5167fb ""
-  "image/home.jpg" 1675337392 120845 3701b1f68dd64a3e02687de89498491f ""
   "image/image_upload.jpg" 1673999154 85696 d1014ab9008768db9081f267a64de58a ""
   "image/index.jpg" 1673999154 162224 91f8e1f98f7bc470e0a12a349ea96251 ""
   "image/movie_upload.jpg" 1673999154 92691 f27dc9ffc1f32a2db6850f2f5c799980 ""
@@ -140,11 +139,11 @@
   "image/table_list.png" 1674605286 106678 791c286b846ea44d5853f097769790a3 ""
   "image/user_login.jpg" 1673999154 77413 c3c16c5127d3a0c4020b3f7b442b2790 ""
   "image/user_register.jpg" 1673999154 86081 cbc802f194f3ace05fd51829ab10d9ee ""
-  "sotsuron2.aux" 1675338895 19741 ee6ff57f6684d145d21efbf04a9247ea "latex"
-  "sotsuron2.lof" 1675338895 6338 b5283e8cc4c4aaa0cd8d6952c643b00a "latex"
-  "sotsuron2.lot" 1675338895 1732 c39f6282f3a67450a8c3a5a6eeb9431a "latex"
-  "sotsuron2.tex" 1675338847 82589 5cbd2674ce2d18be2431e086633b4f77 ""
-  "sotsuron2.toc" 1675338895 3171 2e48e460e86faa7f322b0c438c622582 "latex"
+  "sotsuron2.aux" 1675414876 19540 d920592b9d8c720edccc81b3d7599414 "latex"
+  "sotsuron2.lof" 1675414876 6226 256371536ee5d4263fa03d12de060666 "latex"
+  "sotsuron2.lot" 1675414876 1732 aa328504fc1c8e4a9258ec5418a42f6e "latex"
+  "sotsuron2.tex" 1675414860 82414 d27c3ef14056faac6a1f9c3b3bd5e521 ""
+  "sotsuron2.toc" 1675414876 3189 c966c9380bb536274515e2c4741781fc "latex"
   (generated)
   "sotsuron2.aux"
   "sotsuron2.dvi"
