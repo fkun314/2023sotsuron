@@ -1,0 +1,47 @@
+This is upBibTeX, Version 0.99d-j0.34-u1.28 (utf8.uptex) (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sotsuron2.aux
+The style file: junsrt.bst
+Database file #1: sotsuron2.bib
+You've used 8 entries,
+            2270 wiz_defined-function locations,
+            578 strings with 5363 characters,
+and the built_in function-call counts, 1813 in all, are:
+= -- 112
+> -- 71
+< -- 3
++ -- 29
+- -- 21
+* -- 53
+:= -- 238
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 110
+empty$ -- 200
+format.name$ -- 42
+if$ -- 438
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 4
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 92
+stack$ -- 0
+substring$ -- 24
+swap$ -- 15
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 11
+width$ -- 9
+write$ -- 81
+is.kanji.str$ -- 78

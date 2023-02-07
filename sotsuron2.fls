@@ -510,11 +510,11 @@ INPUT ./image/table_list.png
 INPUT ./image/table_list.png
 INPUT image/table_list.png
 INPUT extractbb -B cropbox -O image/table_list.png
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT ./image/compare.png
 INPUT ./image/compare.png
 INPUT image/compare.png
 INPUT extractbb -B cropbox -O image/compare.png
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT ./image/object_relationship.png
 INPUT ./image/object_relationship.png
 INPUT image/object_relationship.png
@@ -576,10 +576,6 @@ INPUT ./image/result_1_5_1.jpg
 INPUT ./image/result_1_5_1.jpg
 INPUT image/result_1_5_1.jpg
 INPUT extractbb -B cropbox -O image/result_1_5_1.jpg
-INPUT ./image/6_result.jpg
-INPUT ./image/6_result.jpg
-INPUT image/6_result.jpg
-INPUT extractbb -B cropbox -O image/6_result.jpg
 INPUT ./image/7_result.jpg
 INPUT ./image/7_result.jpg
 INPUT image/7_result.jpg
@@ -612,6 +608,10 @@ INPUT ./image/result2_2_4.jpg
 INPUT ./image/result2_2_4.jpg
 INPUT image/result2_2_4.jpg
 INPUT extractbb -B cropbox -O image/result2_2_4.jpg
+INPUT ./image/6_result.jpg
+INPUT ./image/6_result.jpg
+INPUT image/6_result.jpg
+INPUT extractbb -B cropbox -O image/6_result.jpg
 INPUT ./image/result_2_3.jpg
 INPUT ./image/result_2_3.jpg
 INPUT image/result_2_3.jpg
@@ -660,44 +660,14 @@ INPUT ./image/result_2_5_3.png
 INPUT ./image/result_2_5_3.png
 INPUT image/result_2_5_3.png
 INPUT extractbb -B cropbox -O image/result_2_5_3.png
-INPUT ./image/user_register.jpg
-INPUT ./image/user_register.jpg
-INPUT image/user_register.jpg
-INPUT extractbb -B cropbox -O image/user_register.jpg
-INPUT ./image/user_login.jpg
-INPUT ./image/user_login.jpg
-INPUT image/user_login.jpg
-INPUT extractbb -B cropbox -O image/user_login.jpg
-INPUT ./image/index.jpg
-INPUT ./image/index.jpg
-INPUT image/index.jpg
-INPUT extractbb -B cropbox -O image/index.jpg
-INPUT ./image/movie_upload.jpg
-INPUT ./image/movie_upload.jpg
-INPUT image/movie_upload.jpg
-INPUT extractbb -B cropbox -O image/movie_upload.jpg
-INPUT ./image/preparation.jpg
-INPUT ./image/preparation.jpg
-INPUT image/preparation.jpg
-INPUT extractbb -B cropbox -O image/preparation.jpg
-INPUT ./image/ongoing.jpg
-INPUT ./image/ongoing.jpg
-INPUT image/ongoing.jpg
-INPUT extractbb -B cropbox -O image/ongoing.jpg
-INPUT ./image/complete.jpg
-INPUT ./image/complete.jpg
-INPUT image/complete.jpg
-INPUT extractbb -B cropbox -O image/complete.jpg
-INPUT ./image/detail.jpg
-INPUT ./image/detail.jpg
-INPUT image/detail.jpg
-INPUT extractbb -B cropbox -O image/detail.jpg
-INPUT ./image/image_upload.jpg
-INPUT ./image/image_upload.jpg
-INPUT image/image_upload.jpg
-INPUT extractbb -B cropbox -O image/image_upload.jpg
-INPUT ./image/search_result.jpg
-INPUT ./image/search_result.jpg
-INPUT image/search_result.jpg
-INPUT extractbb -B cropbox -O image/search_result.jpg
+INPUT ./sotsuron2.bbl
+INPUT sotsuron2.bbl
+INPUT ./sotsuron2.bbl
+INPUT sotsuron2.bbl
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ectt1440.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecti1440.tfm
 INPUT sotsuron2.aux

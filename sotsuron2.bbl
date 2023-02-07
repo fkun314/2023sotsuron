@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{google_data}
+Google.
+\newblock
+  月間6,500万ユーザーを超えたyoutube，2020年の国内利用実態──テレビでの利用も2倍に.
+\newblock
+  \url{https://www.thinkwithgoogle.com/intl/ja-jp/marketing-strategies/video/youtube-recap2020-2/},
+  2020.
+
+\bibitem{ms_tamura}
+田村千津, 藤原和彦.
+\newblock 貝葉古写本研究向け電子ブック作成手法の検討.
+\newblock 仙台高等専門学校　令和２年度　卒業研究論文,
+  2020.
+
+\bibitem{ANN}
+Anil~K Jain, Jianchang Mao, and K~Moidin Mohiuddin.
+\newblock Artificial neural networks: A tutorial.
+\newblock {\em Computer}, Vol.~29, No.~3, pp. 31--44, 1996.
+
+\bibitem{G}
+浅川伸一, 江間有沙, 工藤郁子, 巣籠悠輔, 瀬谷啓介,
+  松井孝之, 松尾豊.
+\newblock ディープラーニングG検定公式テキスト.
+\newblock 翔泳社, 2020.
+
+\bibitem{cnn}
+Towards~Data Science.
+\newblock
+  https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53.
+\newblock \url{A Comprehensive Guide to Convolutional Neural Networks — the
+  ELI5 way}, 2018.
+
+\bibitem{detectron2}
+Meta AI.
+\newblock Detectron2.
+\newblock
+  \url{https://ai.facebook.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-/}.
+
+\bibitem{coco}
+Microsoft.
+\newblock Microsoft coco: Common objects in context.
+\newblock \url{https://cocodataset.org/}.
+
+\bibitem{wu2019detectron2}
+Yuxin Wu, Alexander Kirillov, Francisco Massa, Wan-Yen Lo, and Ross Girshick.
+\newblock Detectron2.
+\newblock \url{https://github.com/facebookresearch/detectron2}, 2019.
+
+\end{thebibliography}
