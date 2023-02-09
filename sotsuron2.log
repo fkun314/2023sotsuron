@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.euc) (TeX Live 2022) (preloaded format=platex 2022.12.2)  7 FEB 2023 16:17
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.euc) (TeX Live 2022) (preloaded format=platex 2022.12.2)  9 FEB 2023 22:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -378,7 +378,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lof=\write8
 \openout8 = `sotsuron2.lof'.
 
-) [0]
+) [5]
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 82.
@@ -410,7 +410,7 @@ File: image/perceptron.png Graphic file (type bmp)
 File: image/sigmoid.jpg Graphic file (type bmp)
 <image/sigmoid.jpg>
 
-Overfull \hbox (3.44421pt too wide) in paragraph at lines 241--242
+Overfull \hbox (3.44421pt too wide) in paragraph at lines 243--244
 []\JY1/mc/m/n/14.4 この問題を解決するために ， 活性化関数には \T1/cmr/m/n/14.4 ReLU \JY1/mc/m/n/14.4 関数や \T1/cmr/m/n/14.4 Leaky ReLU
  []
 
@@ -434,17 +434,23 @@ File: image/table_list.png Graphic file (type bmp)
  [14] [15]
 File: image/compare.png Graphic file (type bmp)
 <image/compare.png>
- [16] [17]
+ [16]
+File: image/result0_1.png Graphic file (type bmp)
+<image/result0_1.png>
+ [17]
 File: image/object_relationship.png Graphic file (type bmp)
 <image/object_relationship.png>
- [18]
+ [18] [19]
 File: ./image/figure_2.png Graphic file (type bmp)
 <./image/figure_2.png>
- [19] [20] [21] [22]
+ [20] [21] [22]
+File: image/result0_2.png Graphic file (type bmp)
+<image/result0_2.png>
+ [23]
 第 4 章
 File: image/1_result.jpg Graphic file (type bmp)
 <image/1_result.jpg>
-[23
+[24
 
 
 ]
@@ -452,120 +458,112 @@ File: image/2_result.jpg Graphic file (type bmp)
 <image/2_result.jpg>
 File: image/3_result.jpg Graphic file (type bmp)
 <image/3_result.jpg>
- [24]
+ [25]
 File: image/4_result.jpg Graphic file (type bmp)
 <image/4_result.jpg>
 File: image/5_result.jpg Graphic file (type bmp)
 <image/5_result.jpg>
 File: image/result_1_1.jpg Graphic file (type bmp)
 <image/result_1_1.jpg>
- [25] [26]
+ [26] [27]
 File: image/result_1_2.jpg Graphic file (type bmp)
 <image/result_1_2.jpg>
- [27]
+ [28]
 File: image/result_1_3.jpg Graphic file (type bmp)
 <image/result_1_3.jpg>
- [28]
+ [29]
 File: image/result_1_4.jpg Graphic file (type bmp)
 <image/result_1_4.jpg>
- [29]
+ [30]
 File: image/result_1_4_1.jpg Graphic file (type bmp)
 <image/result_1_4_1.jpg>
- [30]
+ [31]
 File: image/result_1_4_2.jpg Graphic file (type bmp)
 <image/result_1_4_2.jpg>
 File: image/result_1_5.jpg Graphic file (type bmp)
 <image/result_1_5.jpg>
 File: image/result_1_5_1.jpg Graphic file (type bmp)
 <image/result_1_5_1.jpg>
- [31] [32]
+ [32] [33]
 File: image/7_result.jpg Graphic file (type bmp)
 <image/7_result.jpg>
 File: image/8_result.jpg Graphic file (type bmp)
 <image/8_result.jpg>
- [33]
+ [34]
 File: image/result_2_1_2.jpg Graphic file (type bmp)
 <image/result_2_1_2.jpg>
- [34]
+ [35]
 File: image/result_2_1_3.jpg Graphic file (type bmp)
 <image/result_2_1_3.jpg>
- [35]
+ [36]
 File: image/result_2_1_4.jpg Graphic file (type bmp)
 <image/result_2_1_4.jpg>
- [36]
+ [37]
 File: image/result2_2_2.jpg Graphic file (type bmp)
 <image/result2_2_2.jpg>
 File: image/result2_2_3.jpg Graphic file (type bmp)
 <image/result2_2_3.jpg>
- [37]
+ [38]
 File: image/result2_2_4.jpg Graphic file (type bmp)
 <image/result2_2_4.jpg>
- [38]
+ [39]
 File: image/6_result.jpg Graphic file (type bmp)
 <image/6_result.jpg>
 File: image/result_2_3.jpg Graphic file (type bmp)
 <image/result_2_3.jpg>
- [39]
+ [40]
 File: image/result_2_3_1.jpg Graphic file (type bmp)
 <image/result_2_3_1.jpg>
- [40]
+ [41]
 File: image/result_2_3_2.jpg Graphic file (type bmp)
 <image/result_2_3_2.jpg>
 File: image/result_2_3_3.jpg Graphic file (type bmp)
 <image/result_2_3_3.jpg>
+ [42]
 File: image/result_2_4.PNG Graphic file (type bmp)
 <image/result_2_4.PNG>
- [41]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42]
+File: image/result_2_4_1.PNG Graphic file (type bmp)
+<image/result_2_4_1.PNG>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43] [44]
 File: image/result_2_4_2.PNG Graphic file (type bmp)
 <image/result_2_4_2.PNG>
 File: image/result_2_4_3.jpg Graphic file (type bmp)
 <image/result_2_4_3.jpg>
- [43] [44]
+ [45] [46]
 File: image/result_2_4_4.png Graphic file (type bmp)
 <image/result_2_4_4.png>
 File: image/result_2_4_5.png Graphic file (type bmp)
 <image/result_2_4_5.png>
- [45]
+ [47]
 File: image/result_2_5.png Graphic file (type bmp)
 <image/result_2_5.png>
- [46]
+ [48]
 File: image/result_2_5_2.png Graphic file (type bmp)
 <image/result_2_5_2.png>
- [47]
+ [49]
 File: image/result_2_5_3.png Graphic file (type bmp)
 <image/result_2_5_3.png>
 
-Overfull \hbox (8.24332pt too wide) detected at line 1292
+Overfull \hbox (8.24332pt too wide) detected at line 1337
 []\JY1/mc/m/n/14.4 トランザクシ ョ ン時間 \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 ms\OT1/cmr/m/n/14.4 ] = []
  []
 
-[48] [49] [50]
+[50] [51] [52]
 第 5 章
-[51
+[53
 
-] [52
+] [54] [55
 
 ] (./sotsuron2.bbl
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Underfull \hbox (badness 2689) in paragraph at lines 4--10
-[]\T1/cmr/m/n/14.4 Google.  \JY1/mc/m/n/14.4 月間 \T1/cmr/m/n/14.4 6,500 \JY1/mc/m/n/14.4 万ユ ーザ ーを超えた \T1/cmr/m/n/14.4 youtube\JY1/mc/m/n/14.4 ， \T1/cmr/m/n/14.4 2020 \JY1/mc/m/n/14.4 年の
- []
-
-
-Underfull \hbox (badness 3098) in paragraph at lines 4--10
-\JY1/mc/m/n/14.4 国内利用実態──テレビでの利用も \T1/cmr/m/n/14.4 2 \JY1/mc/m/n/14.4 倍に\T1/cmr/m/n/14.4 .  $\T1/cmtt/m/n/14.4 https : / / www .
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
-\T1/cmtt/m/n/14.4 thinkwithgoogle . com / intl / ja-[]jp / marketing-[]strategies /
+\T1/cmr/m/n/14.4 com / intl / ja-[]jp / marketing-[]strategies / video / youtube-[]recap2020-[]2/$,
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -587,40 +585,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--34
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--34
-\T1/cmtt/m/n/14.4 AComprehensiveGuidetoConvolutionalNeuralNetworks\JY1/mc/m/n/14.4 ―
+\T1/cmr/m/n/14.4 AComprehensiveGuidetoConvolutionalNeuralNetworks\JY1/mc/m/n/14.4 ―
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 36--40
-[]\T1/cmr/m/n/14.4 Meta AI.  De-tec-tron2.  $\T1/cmtt/m/n/14.4 https : / / ai . facebook . com / blog /
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
+[]\T1/cmr/m/n/14.4 Meta AI.  De-tec-tron2.  $https : / / ai . facebook . com / blog /
  []
 
-
-Overfull \hbox (54.96901pt too wide) in paragraph at lines 36--40
-\T1/cmtt/m/n/14.4 -[]detectron2-[]a-[]pytorch-[]based-[]modular-[]object-[]detection-[]library-[]/$\T1/cmr/m/n/14.4 . 
- []
-
-
-Underfull \hbox (badness 5316) in paragraph at lines 47--50
-[]\T1/cmr/m/n/14.4 Yuxin Wu, Alexan-der Kir-illov, Fran-cisco Massa, Wan-Yen
- []
-
-
-Underfull \hbox (badness 1286) in paragraph at lines 47--50
-\T1/cmr/m/n/14.4 Lo, and Ross Gir-shick.  De-tec-tron2.  $\T1/cmtt/m/n/14.4 https : / / github . com /
- []
-
-) [53
+) [56
 
 
 ] (./sotsuron2.aux) ) 
 Here is how much of TeX's memory you used:
- 6303 strings out of 478724
- 101840 string characters out of 5858392
- 405006 words of memory out of 5000000
- 24592 multiletter control sequences out of 15000+600000
- 493487 words of font info for 105 fonts, out of 8000000 for 9000
+ 6301 strings out of 478724
+ 101609 string characters out of 5858392
+ 405040 words of memory out of 5000000
+ 24591 multiletter control sequences out of 15000+600000
+ 493174 words of font info for 104 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 67i,17n,77p,337b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,20n,77p,337b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sotsuron2.dvi (59 pages, 132160 bytes).
+Output written on sotsuron2.dvi (62 pages, 137584 bytes).

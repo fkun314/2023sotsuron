@@ -155,7 +155,9 @@
 
 \begin{figure}[b]
   \centering
-  \includegraphics[width=7cm]{image/neuron.png}
+  \fbox{
+    \includegraphics[width=7cm]{image/neuron.png}
+  }
   \caption{人工ニューロン}
   \label{fig:neuron}
 \end{figure}
@@ -450,7 +452,15 @@ CNNはDetectron2の学習済みデータを用いることで一般的な物体�
 画像と動画のシーンを比較した際に，平均で0.1を下回る場合に類似シーンとして出力する．
 また，スコアはオブジェクトの座標が完全に一致している場合が100\%となるように計算している．
 
-% 出力結果はどの部分？
+% 出力結果
+これらの処理を経て，ユーザは図\ref{fig:result0_1}のように類似シーンの検索結果を得られる．
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=13cm]{image/result0_1.png}
+  \caption{位置情報の検索での結果表示}
+  \label{fig:result0_1}
+\end{figure}
+
 
 \section{オブジェクトの位置関係を用いた検索}\label{chap3-5}
 \label{sec:search_relationship}
@@ -467,7 +477,7 @@ CNNはDetectron2の学習済みデータを用いることで一般的な物体�
 位置関係が類似しているデータは，各オブジェクト間の距離と角度を用いることで検出できると考えられる．
 具体的な例を，図\ref{fig:object_relationship}に示す．
 
-\begin{figure}[b]
+\begin{figure}[t]
   \centering
   \includegraphics[width=13cm]{image/object_relationship.png}
   \caption{検索結果}
@@ -498,11 +508,13 @@ $x$と$y$の値は，直交座標系の値となっているため，距離と�
 この時，角度を求める際の点の座標は，それぞれのオブジェクトの中心点とする．
 中心点は，(\ref{eq:center})式に示すように，$x$座標は$x_{min}$座標と$x_{max}$座標の平均値，$y$座標は$y_{min}$座標と$y_{max}$座標の平均値を用いる．
 
-\begin{eqnarray}
+\begin{equation}
   \label{eq:center}
-  x_{center} &=& \frac{x_{min}+x_{max}}{2} \\
-  y_{center} &=& \frac{y_{min}+y_{max}}{2}
-\end{eqnarray}
+  \begin{split}
+  x_{center} &= \frac{x_{min}+x_{max}}{2} \\
+  y_{center} &= \frac{y_{min}+y_{max}}{2}
+  \end{split}
+\end{equation}
 
 また，角度の計算には，(\ref{eq:angle})式を用いる．
 
@@ -530,11 +542,14 @@ $x$と$y$の値は，直交座標系の値となっているため，距離と�
 まず，(\ref{eq:object_list})式から隣り合っている3点を選択し，2つの辺を作成する．
 次に，その2つの辺のなす角度を計算することで，図形の内角を求めることができる．
 2つの辺は，3つの点をそれぞれ($x_1$, $y_1$), ($x_2$, $y_2$), ($x_3$, $y_3$)とすると，(\ref{eq:edge})式で求める．
-\begin{eqnarray}
+
+\begin{equation}
   \label{eq:edge}
-  \vec{e_1} &=& \left( \begin{array}{c} x_2-x_1 \\ y_2-y_1 \end{array} \right) \\
-  \vec{e_2} &=& \left( \begin{array}{c} x_3-x_1 \\ y_3-y_1 \end{array} \right)
-\end{eqnarray}
+  \begin{split}
+    \vec{e_1} &= \left( \begin{array}{c} x_2-x_1 \\ y_2-y_1 \end{array} \right) \\
+    \vec{e_2} &= \left( \begin{array}{c} x_3-x_1 \\ y_3-y_1 \end{array} \right)
+  \end{split}
+\end{equation}
 
 角度の計算には，(\ref{eq:angle2})式を用いる．
 \begin{eqnarray}
@@ -587,10 +602,16 @@ $x$と$y$の値は，直交座標系の値となっているため，距離と�
 以上の過程を経て，類似シーンの検索を行う．
 結果の出力では，図形の回転角度，オブジェクト間の長さの比率の平均，オブジェクト間の長さの比率の分散，オブジェクト間の角度の分散を出力する．
 
-図形の形が似ている場合の出力結果を最優先するため，図形のオブジェクト間の角度の分散を基準の出力のソートを行い，結果を出力する．
-
+図形の形が似ている場合の出力結果を最優先するため，図形のオブジェクト間の角度の分散を基準の出力のソートを行い，図\ref{fig:result0_2}のように結果を出力する．
 
 % 出力結果の例はどんなの？
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=13cm]{image/result0_2.png}
+  \caption{位置関係の検索での結果表示}
+  \label{fig:result0_2}
+\end{figure}
+
 
 \section{まとめ}\label{chap:3-6}
 本システムの動画検索システムの基本的な動作について述べた．
@@ -690,7 +711,7 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
   \centering
   \caption{production ID\_4265040.mp4の動画データの詳細}
   \label{tab:tab_1_1_1}
-  \begin{tabular}{cc}
+  \begin{tabular}{c|c}
     \toprule
     \thead{項目} & \thead{数値} \\
     \midrule
@@ -935,7 +956,7 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 
 また，フレーム番号453のシーンを図\ref{fig:img_2_1_3}に示す．
 
-\begin{figure}[b]
+\begin{figure}[t]
   \centering
   \includegraphics[width=13cm]{image/result_2_1_3.jpg}
   \caption{図\ref{fig:img_1_2}の453フレームでの検出結果}
@@ -948,7 +969,7 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 実際，図\ref{fig:img_2_1_3}では，画像よりも少し画角の引かれたシーンが類似シーンとして出力されている．
 
 また，参考として，傾きが一番大きいフレーム番号68のシーンを図\ref{fig:img_2_1_4}に示す．
-\begin{figure}[b]
+\begin{figure}[t]
   \centering
   \includegraphics[width=13cm]{image/result_2_1_4.jpg}
   \caption{図\ref{fig:img_1_2}の68フレームでの検出結果}
@@ -1123,6 +1144,8 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
   \label{fig:img_2_3_3}
 \end{figure}
 
+\vskip\baselineskip
+
 次に，オブジェクトが3つ以上ある場合について考察を行う．
 図\ref{fig:movie1}から，2人の位置が近い状態のシーン検索を行いたい．
 図\ref{fig:img_2_3}で行なったように，PowerPointを使用して作成を行った（図\ref{fig:img_2_4}）．
@@ -1138,8 +1161,21 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 
 
 この画像を入力として検索してみたところ，位置情報と位置関係のどちらの検索結果とも類似シーンが出力されなかった．
-これは，Detectron2の学習済みデータに「kickboard」が存在せず，図\ref{fig:img_2_4}中のキックボードのイラストが正しく認識されなかったためだと考える．
-そこで，元々の動画（図\ref{fig:movie1}）がどのような解析結果としてデータベースに保存されているのかを確認すると，表\ref{tab:tab_2_5}のように認識されていることがわかった．
+入力画像の解析結果は，図\ref{fig:img_2_4_1}に示す．
+\begin{figure}[h]
+  \centering
+  \fbox{
+    \includegraphics[width=105mm]{image/result_2_4_1.PNG}
+  }
+  \caption{図\ref{fig:img_2_4}の解析結果}
+  \label{fig:img_2_4_1}
+\end{figure}
+
+解析結果を見ると，入力した画像で，検出されているオブジェクトが2つ（personとteddy bear）であることがわかる．
+右側のキックボードに乗っている少女が，person（人）teddy bear（熊のぬいぐるみ）として認識されていたため，目的の検索結果が得られなかったとが考えられる．
+Detectron2の学習済みデータを使用して入力画像の解析を行っており，今回使用した「いらすとや」の画像には対応していない可能性がある．
+
+そこで，検索対象となるべき動画（図\ref{fig:movie1}）について，どのようなオブジェクトが検出されているかを確認を行なった（表\ref{tab:tab_2_5}）．
 
 \begin{table}[t]
   \centering
@@ -1156,10 +1192,8 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
   \end{tabular}
 \end{table}
 
-他のフレームでも基本的に同様の結果となった．
-
-類似シーンの検索には，personとskateboardを使用した画像を作成することで，検索結果を得ることができると考えられる．
-そのため，図\ref{fig:img_2_4}中のkickboardをskateboardに変更して，図\ref{fig:img_2_4_2}を画像に入力した結果，表\ref{tab:tab_2_6}のような結果を得ることができた．
+表\ref{tab:tab_2_5}では，特定のフレームの情報を抽出しているが，ほとんどのフレームで同じような結果となっていたことがわかった．
+そこで，personとskateboardを使用した画像を改めて作成した（図\ref{fig:img_2_4_2}）．
 
 \begin{figure}[t]
   \centering
@@ -1169,6 +1203,8 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
   \caption{PowerPointで作成した入力画像}
   \label{fig:img_2_4_2}
 \end{figure}
+
+この画像を入力として検索を行った結果を表\ref{tab:tab_2_6}に示す．
 
 \begin{table}[t]
   \centering
@@ -1201,7 +1237,10 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
   \label{fig:img_2_4_3}
 \end{figure}
 
-このように，動画内に目的のシーンのオブジェクト構成がわかる場合は，そのシーンを動画の中から検索することが可能となっている．
+このように，動画内に目的のシーンのオブジェクト構成がわかる場合は，
+そのシーンと類似している画像を自作することで，目的のシーンの検索が可能となっている．
+しかし，必ずとも目的のシーンが検索できるわけではない．
+検索する画像中のオブジェクトの認識が難しい場合や，Detectron2で識別できない場合などは，検索したい動画の解析結果を確認しながら画像の作成，並びに検索を行う必要がある．
 
 \subsection{考察}\label{chap4-3-1}
 画像に一致している動画だけでなく，画像および動画内のオブジェクトの関係性を考慮して検索を行うことで，より幅広い検索が可能となった．
@@ -1257,7 +1296,9 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 その結果を図\ref{fig:img_2_5}に示す．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/result_2_5.png}
+  \fbox{
+    \includegraphics[width=13cm]{image/result_2_5.png}
+  }
   \caption{DBサイズと検出時間の関係}
   \label{fig:img_2_5}
 \end{figure}
@@ -1269,18 +1310,22 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 位置情報を使用した検索にかかる時間を図\ref{fig:img_2_5_2}に，位置関係を使用した検索にかかる時間を図\ref{fig:img_2_5_3}に示す．
 検索には画像内のオブジェクト数が異なる2種類の画像を使用した．
 1枚目の画像は，画像内に3つのオブジェクトが存在する．
-2枚目の画像は，画像内に８つのオブジェクトが存在する．
+2枚目の画像は，画像内に8つのオブジェクトが存在する．
 これにより，オブジェクト数によって検索時間がどのように変化するかもを調べた．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/result_2_5_2.png}
+  \fbox{
+    \includegraphics[width=13cm]{image/result_2_5_2.png}
+  }
   \caption{DBサイズと検索時間の関係(位置情報を使用)}
   \label{fig:img_2_5_2}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/result_2_5_3.png}
+  \fbox{
+    \includegraphics[width=13cm]{image/result_2_5_3.png}
+  }
   \caption{DBサイズと検索時間の関係(位置関係を使用)}
   \label{fig:img_2_5_3}
 \end{figure}
@@ -1322,14 +1367,28 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 
 \chapter{結論}
 \label{sec:conclusion}
-本研究では，オブジェクト検出を用いた方法で動画検索システムを構築することができた．
-また，さまざまな画像を用いて検索の評価を行った．
-オブジェクトが多い時や，オブジェクトの位置関係が複雑な時には，検索の精度が低下することがわかった．
-しかし，通常の検索方法ではできないような，オブジェクトの位置関係を考慮した検索が可能となった.
+% まだ修正できていない．
+本研究では，画像を入力として，その画像に含まれるオブジェクトの位置情報や位置関係を用いることによる検索システムの構築を行なった．
 
-今後の課題として，検索性能や検索速度向上なども必要だということがわかった．
-また，検索の精度を向上させるために，オブジェクトを認識させるためのモデルを改良したり，認識率のパラメータを変えることで，より精度の高い検索が可能となると考えられる．
+第1章では，本研究の背景や目的について述べた．
 
+第2章では，本研究で使用する画像処理の手法について述べた．
+特に，ニューラルネットワーク（ANN）の基本事項や，CNNを用いた画像認識について述べた．
+
+第3章では，本研究で使用する検索システムの構築について述べた．
+画像解析にはDetectron2を使用し，Python製フレームワークFlaskを用いたシステムの構築について述べた．
+また，Detectron2で検出されたオブジェクトの位置情報や位置関係を用いた検索システムの計算方法や，検索結果の表示方法について述べた．
+
+第4章では，本研究の動作結果と考察について述べた．
+位置情報を用いた検索を行うことで，一致シーンの検出を行うことが確認できた．
+また，類似シーンについても検索結果に表示することができた．
+しかし，オブジェクトの数が少ない場合や，オブジェクトの位置関係が複雑な場合には，検索結果が正しく表示されないことが確認された．
+位置関係を用いた検索では，多くの類似シーンを検索結果に出力することができた．
+また，動画の切り出し画像ではなく，外部ツールを用いて作成したイメージ画像でも目的にシーンの検索を行うことができた．
+特に，位置関係を重要とする映像（例えば，スポーツ映像でダブルスの試合の映像や，複数人でのダンスレッスンの映像）に対して，より実用的な類似シーンを提示できると考えられる．
+
+システム全体として，これまでフレーム毎のRGB値やヒストグラム比較で行われていた画像・動画検索を，CNNの解析結果とデータベースを元にした新しい検索システムの構築を行うことができた．
+今後の展望として，より実用的なシステムの構築を行うべく，検索精度の向上や検索速度向上などを課題として引き継ぐ．
 
 \chapter*{謝辞}
 \addcontentsline{toc}{chapter}{謝辞}
@@ -1340,6 +1399,7 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 
 
 \bibliographystyle{junsrt}
+\urlstyle{same}
 \bibliography{sotsuron2.bib}
 
 \end{document}

@@ -10,41 +10,44 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces システム全体の流れ\relax }}{14}{}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces データベース図\relax }}{15}{}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces サイズの異なる画像の比較図\relax }}{17}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 検索結果\relax }}{18}{}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces オブジェクトの最短経路で結ぶ図形\relax }}{20}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 位置情報の検索での結果表示\relax }}{18}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 検索結果\relax }}{19}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces オブジェクトの最短経路で結ぶ図形\relax }}{20}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 位置関係の検索での結果表示\relax }}{23}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 親子が向かい合っている動画\relax }}{24}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 飛行機がプッシュバックしているシーンを撮影した動画\relax }}{24}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 時計しか映っていないタイムラプス動画\relax }}{25}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 同一シーンが繰り返される動画\relax }}{25}{}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces オブジェクトが大量に映っている動画\relax }}{26}{}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 親子が向かい合っている動画のあるシーン\relax }}{26}{}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 飛行機を映した画像\relax }}{28}{}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces 時計の画像\relax }}{29}{}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces ディジタルヒューマンのイメージ画像\relax }}{30}{}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces フレーム番号63の検出結果\relax }}{31}{}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces フレーム番号149の検出結果\relax }}{31}{}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces カルーセルの様子\relax }}{32}{}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces 図4.12\@setref@ {}とは別のシーンの様子\relax }}{32}{}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces 人と犬が映っている動画　その1\relax }}{34}{}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces 人と犬が映っている動画　その2\relax }}{34}{}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces 図4.7\@setref@ {}の459フレームでの検出結果\relax }}{35}{}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces 図4.7\@setref@ {}の453フレームでの検出結果\relax }}{36}{}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces 図4.7\@setref@ {}の68フレームでの検出結果\relax }}{36}{}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces 入力画像\relax }}{37}{}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces 図形の傾きが小さいフレーム番号162\relax }}{38}{}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces 動画タイトルの異なっているフレーム番号292\relax }}{38}{}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces 少年がスポーツカーに手を振っている動画\relax }}{39}{}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces 入力画像\relax }}{40}{}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces 図4.19\@setref@ {}のベストマッチシーン（ソート：図形の傾き）\relax }}{41}{}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces 図4.24\@setref@ {}のベストマッチシーン（ソート：長さの平均）\relax }}{42}{}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces 目的のシーン\relax }}{42}{}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces PowerPointで作成した入力画像\relax }}{43}{}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces PowerPointで作成した入力画像\relax }}{43}{}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces 図4.27\@setref@ {}の検出結果（フレーム番号：356）\relax }}{44}{}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces オブジェクトが4つの図形の描画\relax }}{46}{}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces オブジェクトが9つの図形の描画\relax }}{47}{}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces DBサイズと検出時間の関係\relax }}{47}{}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces DBサイズと検索時間の関係(位置情報を使用)\relax }}{48}{}%
-\contentsline {figure}{\numberline {4.34}{\ignorespaces DBサイズと検索時間の関係(位置関係を使用)\relax }}{48}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 親子が向かい合っている動画\relax }}{25}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 飛行機がプッシュバックしているシーンを撮影した動画\relax }}{25}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 時計しか映っていないタイムラプス動画\relax }}{26}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 同一シーンが繰り返される動画\relax }}{26}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces オブジェクトが大量に映っている動画\relax }}{27}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 親子が向かい合っている動画のあるシーン\relax }}{27}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 飛行機を映した画像\relax }}{29}{}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 時計の画像\relax }}{30}{}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ディジタルヒューマンのイメージ画像\relax }}{31}{}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces フレーム番号63の検出結果\relax }}{32}{}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces フレーム番号149の検出結果\relax }}{32}{}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces カルーセルの様子\relax }}{33}{}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces 図4.12\@setref@ {}とは別のシーンの様子\relax }}{33}{}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces 人と犬が映っている動画　その1\relax }}{35}{}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces 人と犬が映っている動画　その2\relax }}{35}{}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces 図4.7\@setref@ {}の459フレームでの検出結果\relax }}{36}{}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces 図4.7\@setref@ {}の453フレームでの検出結果\relax }}{37}{}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces 図4.7\@setref@ {}の68フレームでの検出結果\relax }}{37}{}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces 入力画像\relax }}{38}{}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces 図形の傾きが小さいフレーム番号162\relax }}{39}{}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces 動画タイトルの異なっているフレーム番号292\relax }}{39}{}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces 少年がスポーツカーに手を振っている動画\relax }}{40}{}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces 入力画像\relax }}{41}{}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces 図4.19\@setref@ {}のベストマッチシーン（ソート：図形の傾き）\relax }}{42}{}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces 図4.24\@setref@ {}のベストマッチシーン（ソート：長さの平均）\relax }}{43}{}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces 目的のシーン\relax }}{43}{}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces PowerPointで作成した入力画像\relax }}{44}{}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces 図4.27\@setref@ {}の解析結果\relax }}{44}{}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces PowerPointで作成した入力画像\relax }}{45}{}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces 図4.27\@setref@ {}の検出結果（フレーム番号：356）\relax }}{46}{}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces オブジェクトが4つの図形の描画\relax }}{47}{}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces オブジェクトが9つの図形の描画\relax }}{48}{}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces DBサイズと検出時間の関係\relax }}{49}{}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces DBサイズと検索時間の関係(位置情報を使用)\relax }}{50}{}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces DBサイズと検索時間の関係(位置関係を使用)\relax }}{50}{}%
 \addvspace {10\p@ }
