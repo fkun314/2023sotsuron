@@ -24,11 +24,11 @@
 \contentsline {chapter}{\numberline {第4章}動作検証と考察}{24}{}%
 \contentsline {section}{\numberline {4.1}はじめに}{24}{}%
 \contentsline {section}{\numberline {4.2}位置情報を用いた検索システムについて}{24}{}%
-\contentsline {subsection}{\numberline {4.2.1}考察}{33}{}%
+\contentsline {subsection}{\numberline {4.2.1}考察}{32}{}%
 \contentsline {section}{\numberline {4.3}位置関係を用いた検索システムについて}{34}{}%
-\contentsline {subsection}{\numberline {4.3.1}特殊な検索方法}{40}{}%
-\contentsline {subsection}{\numberline {4.3.2}考察}{46}{}%
-\contentsline {section}{\numberline {4.4}全体を通しての考察}{48}{}%
-\contentsline {section}{\numberline {4.5}まとめ}{52}{}%
-\contentsline {chapter}{\numberline {第5章}結論}{53}{}%
-\contentsline {chapter}{謝辞}{55}{}%
+\contentsline {subsection}{\numberline {4.3.1}特殊な検索方法}{39}{}%
+\contentsline {subsection}{\numberline {4.3.2}考察}{45}{}%
+\contentsline {section}{\numberline {4.4}全体を通しての考察}{47}{}%
+\contentsline {section}{\numberline {4.5}まとめ}{50}{}%
+\contentsline {chapter}{\numberline {第5章}結論}{51}{}%
+\contentsline {chapter}{謝辞}{53}{}%

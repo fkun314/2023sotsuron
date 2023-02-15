@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex sotsuron2"] 1675949143 "sotsuron2.aux" "sotsuron2.bbl" "sotsuron2" 1675949158
+["bibtex sotsuron2"] 1676470977 "sotsuron2.aux" "sotsuron2.bbl" "sotsuron2" 1676470988
   "junsrt.bst" 0 -1 0 ""
-  "sotsuron2.aux" 1675949151 17495 610403510db13104adf732587dbb3838 "latex"
+  "sotsuron2.aux" 1676470981 17598 1d9a51ca16fd47deb9aa0dc4c2f29d13 "latex"
   "sotsuron2.bib" 1675921969 2047 3ae028a1f86f20ebc9ffbfcd37ddef27 ""
   (generated)
   "sotsuron2.bbl"
   "sotsuron2.blg"
-["dvipdf"] 1675949152 "sotsuron2.dvi" "sotsuron2.pdf" "sotsuron2" 1675949158
-  "sotsuron2.dvi" 1675949151 137584 ba3258b734a4512b6b28115984a68b5d "latex"
+["dvipdf"] 1676470981 "sotsuron2.dvi" "sotsuron2.pdf" "sotsuron2" 1676470988
+  "sotsuron2.dvi" 1676470981 137532 23219b059e6ce97ed3d747f2d060bca7 "latex"
   (generated)
   "sotsuron2.pdf"
-["latex"] 1675949147 "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" "sotsuron2.dvi" "sotsuron2" 1675949158
-  "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" 1675949144 79671 5c243bead1b370ce9cc70dd94c827926 ""
+["latex"] 1676470977 "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" "sotsuron2.dvi" "sotsuron2" 1676470988
+  "/Users/mochi/GitHub/2023sotsuron/sotsuron2.tex" 1676470961 79733 6e2c62f5608c6ca25859c0ac407d769e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -131,7 +131,7 @@
   "image/result_2_3_3.jpg" 1674358486 80612 c2f6601ee2e9a6e56c68ea0f750de490 ""
   "image/result_2_4.PNG" 1675146424 359364 d969efe715678fb8262fd2e48e7097c6 ""
   "image/result_2_4_1.PNG" 1675916767 445347 dcbce283fb368661f0e950fa58805694 ""
-  "image/result_2_4_2.PNG" 1675146439 36480 9807e20f8c4c1f5cdcd7383c7bd22099 ""
+  "image/result_2_4_2_2.PNG" 1676467216 92573 6adfbdfb702bb09f213aee993f9e7fe6 ""
   "image/result_2_4_3.jpg" 1675146773 100594 c00b32f6b488ac2c9873b617b46291e9 ""
   "image/result_2_4_4.png" 1675748310 463293 d6c16a19058244458878e1a51cbeb73f ""
   "image/result_2_4_5.png" 1675748323 505022 dfa221b4405dcfbce8a2c721fc6291ea ""
@@ -140,12 +140,12 @@
   "image/result_2_5_3.png" 1675160982 30494 db2f5c1e17ff9670c55cc34b4b437f9e ""
   "image/sigmoid.jpg" 1674440610 20080 b133ea69d9542307e9e7bd61719e3a76 ""
   "image/table_list.png" 1674605286 106678 791c286b846ea44d5853f097769790a3 ""
-  "sotsuron2.aux" 1675949151 17495 610403510db13104adf732587dbb3838 "latex"
-  "sotsuron2.bbl" 1675949143 1654 e88c02a4b10a6c7646266afe8cfc68d2 "bibtex sotsuron2"
-  "sotsuron2.lof" 1675949151 5563 ae80d98f7cdac9cd376aab02743e817a "latex"
-  "sotsuron2.lot" 1675949151 1721 33ed000a3fde52909d10eb898ad9706c "latex"
-  "sotsuron2.tex" 1675949144 79671 5c243bead1b370ce9cc70dd94c827926 ""
-  "sotsuron2.toc" 1675949151 2590 ded6f33121a658b9325c8876fbb9f480 "latex"
+  "sotsuron2.aux" 1676470981 17598 1d9a51ca16fd47deb9aa0dc4c2f29d13 "latex"
+  "sotsuron2.bbl" 1676470977 1654 3efa6f8b5cbf64b0c011de2526e8235c "bibtex sotsuron2"
+  "sotsuron2.lof" 1676470981 5578 b045a6b50c76c2901271f42e2ba830a9 "latex"
+  "sotsuron2.lot" 1676470981 1720 1782acf40a2790ee7175a80b76fea1b0 "latex"
+  "sotsuron2.tex" 1676470961 79733 6e2c62f5608c6ca25859c0ac407d769e ""
+  "sotsuron2.toc" 1676470981 2590 8d43b55f4acebebd06038d086493a976 "latex"
   (generated)
   "sotsuron2.aux"
   "sotsuron2.dvi"

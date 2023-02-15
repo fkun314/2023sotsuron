@@ -644,10 +644,10 @@ INPUT ./image/result_2_4_1.PNG
 INPUT ./image/result_2_4_1.PNG
 INPUT image/result_2_4_1.PNG
 INPUT extractbb -B cropbox -O image/result_2_4_1.PNG
-INPUT ./image/result_2_4_2.PNG
-INPUT ./image/result_2_4_2.PNG
-INPUT image/result_2_4_2.PNG
-INPUT extractbb -B cropbox -O image/result_2_4_2.PNG
+INPUT ./image/result_2_4_2_2.PNG
+INPUT ./image/result_2_4_2_2.PNG
+INPUT image/result_2_4_2_2.PNG
+INPUT extractbb -B cropbox -O image/result_2_4_2_2.PNG
 INPUT ./image/result_2_4_3.jpg
 INPUT ./image/result_2_4_3.jpg
 INPUT image/result_2_4_3.jpg
