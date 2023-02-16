@@ -532,26 +532,26 @@ INPUT ./image/result0_2.png
 INPUT ./image/result0_2.png
 INPUT image/result0_2.png
 INPUT extractbb -B cropbox -O image/result0_2.png
-INPUT ./image/1_result.jpg
-INPUT ./image/1_result.jpg
-INPUT image/1_result.jpg
-INPUT extractbb -B cropbox -O image/1_result.jpg
-INPUT ./image/2_result.jpg
-INPUT ./image/2_result.jpg
-INPUT image/2_result.jpg
-INPUT extractbb -B cropbox -O image/2_result.jpg
-INPUT ./image/3_result.jpg
-INPUT ./image/3_result.jpg
-INPUT image/3_result.jpg
-INPUT extractbb -B cropbox -O image/3_result.jpg
-INPUT ./image/4_result.jpg
-INPUT ./image/4_result.jpg
-INPUT image/4_result.jpg
-INPUT extractbb -B cropbox -O image/4_result.jpg
-INPUT ./image/5_result.jpg
-INPUT ./image/5_result.jpg
-INPUT image/5_result.jpg
-INPUT extractbb -B cropbox -O image/5_result.jpg
+INPUT ./image/1.png
+INPUT ./image/1.png
+INPUT image/1.png
+INPUT extractbb -B cropbox -O image/1.png
+INPUT ./image/2.png
+INPUT ./image/2.png
+INPUT image/2.png
+INPUT extractbb -B cropbox -O image/2.png
+INPUT ./image/3.png
+INPUT ./image/3.png
+INPUT image/3.png
+INPUT extractbb -B cropbox -O image/3.png
+INPUT ./image/4.png
+INPUT ./image/4.png
+INPUT image/4.png
+INPUT extractbb -B cropbox -O image/4.png
+INPUT ./image/5.png
+INPUT ./image/5.png
+INPUT image/5.png
+INPUT extractbb -B cropbox -O image/5.png
 INPUT ./image/result_1_1.jpg
 INPUT ./image/result_1_1.jpg
 INPUT image/result_1_1.jpg
@@ -584,14 +584,14 @@ INPUT ./image/result_1_5_1.jpg
 INPUT ./image/result_1_5_1.jpg
 INPUT image/result_1_5_1.jpg
 INPUT extractbb -B cropbox -O image/result_1_5_1.jpg
-INPUT ./image/7_result.jpg
-INPUT ./image/7_result.jpg
-INPUT image/7_result.jpg
-INPUT extractbb -B cropbox -O image/7_result.jpg
-INPUT ./image/8_result.jpg
-INPUT ./image/8_result.jpg
-INPUT image/8_result.jpg
-INPUT extractbb -B cropbox -O image/8_result.jpg
+INPUT ./image/6.png
+INPUT ./image/6.png
+INPUT image/6.png
+INPUT extractbb -B cropbox -O image/6.png
+INPUT ./image/7.png
+INPUT ./image/7.png
+INPUT image/7.png
+INPUT extractbb -B cropbox -O image/7.png
 INPUT ./image/result_2_1_2.jpg
 INPUT ./image/result_2_1_2.jpg
 INPUT image/result_2_1_2.jpg
@@ -616,10 +616,10 @@ INPUT ./image/result2_2_4.jpg
 INPUT ./image/result2_2_4.jpg
 INPUT image/result2_2_4.jpg
 INPUT extractbb -B cropbox -O image/result2_2_4.jpg
-INPUT ./image/6_result.jpg
-INPUT ./image/6_result.jpg
-INPUT image/6_result.jpg
-INPUT extractbb -B cropbox -O image/6_result.jpg
+INPUT ./image/8.png
+INPUT ./image/8.png
+INPUT image/8.png
+INPUT extractbb -B cropbox -O image/8.png
 INPUT ./image/result_2_3.jpg
 INPUT ./image/result_2_3.jpg
 INPUT image/result_2_3.jpg

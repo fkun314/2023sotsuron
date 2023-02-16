@@ -294,7 +294,7 @@ CNNにはパーセプトロンの構造とは異なり，畳み込み層(convolu
 
 \section{使用するライブラリについて}
 \label{chap3-2}
-本研究ではFacebook AI Research(FAIR)が公表したDetectron2を使用する．
+本研究ではFacebook AI Research(FAIR)が開発したDetectron2を使用する．
 Detectron2とは，高機能な物体検出およびセグメンテーション機能を有する次世代ライブラリである\cite{detectron2}．
 特徴としては，モデルの訓練速度及び推論速度が非常に高速であること，物体の検出数が多いことが挙げられる．
 また，一部のプログラム書き換えと使用する学習済みデータの切り替えを行うことで，Classification（画像分類），Object Detection（物体認識）等の豊富な機能を簡単に実装することが可能となっている．
@@ -349,14 +349,14 @@ Making Indexでは，動画のインデックス作成およびデータベー�
 Search Videosでは，検索として入力した画像と一致や類似する動画のタイムスタンプを，データベースから検索する機能である．
 ユーザーがアップロードした画像に対して，動画解析時と同様にDetectron2を用いた解析を行う．
 
-本システムの解析にはDetectron2を用いるが，解析に使用するデータを全て統一することで，同じ画像を複数回入力しても出力が全て一致する性質を利用する．
+本システムの解析にはDetectron2を用いるが，解析に使用するモデルを全て統一することで，同じ画像を複数回入力しても出力が全て一致する性質を利用する．
 
 システムの全体には，Python製WebフレームワークFlaskを使用する．
 画像解析時のPythonコードとシームレスな動作が可能な点，GUIライブラリを使用しなくても良い点などがFlaskを採用した理由である．
 
 \subsection{データベースの作成について}\label{chap3-3-1}
 本システムでは，ユーザー情報並びに動画，画像などの情報を，データベースを用いて管理している．
-構築しているデータベースは図\ref{fig:table_list}のとおりである．
+構築したデータベースは図\ref{fig:table_list}のとおりである．
 
 \begin{figure}[t]
   \centering
@@ -633,35 +633,35 @@ $x$と$y$の値は，直交座標系の値となっているため，距離と�
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/1_result.jpg}
+  \includegraphics[width=13cm]{image/1.png}
   \caption{親子が向かい合っている動画}
   \label{fig:movie1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/2_result.jpg}
+  \includegraphics[width=13cm]{image/2.png}
   \caption{飛行機がプッシュバックしているシーンを撮影した動画}
   \label{fig:movie2}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/3_result.jpg}
+  \includegraphics[width=13cm]{image/3.png}
   \caption{時計しか映っていないタイムラプス動画}
   \label{fig:movie3}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{image/4_result.jpg}
+  \includegraphics[width=13cm]{image/4.png}
   \caption{同一シーンが繰り返される動画}
   \label{fig:movie4}
 \end{figure}
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=13cm]{image/5_result.jpg}
+  \includegraphics[width=13cm]{image/5.png}
   \caption{オブジェクトが大量に映っている動画}
   \label{fig:movie5}
 \end{figure}
@@ -895,14 +895,14 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 \ref{chap4-2}節で用いた4つの動画に加え，類似するシーンが存在している動画2つも検索対象として用いる（図\ref{fig:movie7}，図\ref{fig:movie8}）．
 \begin{figure}[b]
   \centering
-  \includegraphics[width=11cm]{image/7_result.jpg}
+  \includegraphics[width=11cm]{image/6.png}
   \caption{人と犬が映っている動画　その1}
   \label{fig:movie7}
 \end{figure}
 
 \begin{figure}[b]
   \centering
-  \includegraphics[width=11cm]{image/8_result.jpg}
+  \includegraphics[width=11cm]{image/7.png}
   \caption{人と犬が映っている動画　その2}
   \label{fig:movie8}
 \end{figure}
@@ -1050,7 +1050,7 @@ production ID\_4265040.mp4の動画データの詳細を見てみると表\ref{t
 図\ref{fig:movie6}は，新しい解析対象の動画として加えた，少年がスポーツカーに手を振っている様子を撮影した動画である．
 \begin{figure}[b]
   \centering
-  \includegraphics[width=13cm]{image/6_result.jpg}
+  \includegraphics[width=13cm]{image/8.png}
   \caption{少年がスポーツカーに手を振っている動画}
   \label{fig:movie6}
 \end{figure}

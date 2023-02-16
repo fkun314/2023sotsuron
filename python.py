@@ -68,7 +68,7 @@ def extract_img(video_path):
         video.set(1, frame_number)
         _, frame = video.read()
         # フレーム番号を追加
-        cv2.putText(frame, "fps: "+str(frame_number), (10, 100), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 150, 255), 15)
+        cv2.putText(frame, "Frame No."+str(frame_number), (10, 100), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 150, 255), 15)
         if i < 2:
             frames1.append(frame)
         else:
@@ -78,7 +78,7 @@ def extract_img(video_path):
     frame = cv2.vconcat([frame, cv2.hconcat(frames2)])
 
     # 画像として保存
-    cv2.imwrite("result.jpg", frame)
+    cv2.imwrite(video_path.replace('.mp4', '.png'), frame)
 
     # 動画のクローズ
     video.release()
@@ -104,4 +104,4 @@ if __name__ == '__main__':
     # cv2.imwrite("result.jpg", draw_objects_on_image(img2, detected_list2))
 
     # 動画から４枚を抽出するやつ
-    extract_img('3.mp4')
+    extract_img('9.mp4')
