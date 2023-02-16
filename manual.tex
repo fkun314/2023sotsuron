@@ -35,7 +35,26 @@
 \usepackage{booktabs}
 \usepackage{makecell}
 
-\renewcommand{\bibname}{参考文献}
+\usepackage{listings,jvlisting} %日本語のコメントアウトをする場合jvlisting（もしくはjlisting）が必要
+%ここからソースコードの表示に関する設定
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
 
 \begin{document}
 \pagenumbering{roman}
@@ -44,16 +63,16 @@
   %\LARGE
   \null \null
   \vspace{10mm}
-  令和04年度　卒業研究論文\\
+  令和04年度　卒業研究論文　付録\\
   %\vfill
   \vspace{55.15mm}
   \null
   % 研究題目\\
-  {\Large CNNを用いた動画検索用インデックス作成に関する研究}\\
+  {\Large CNNを用いた動画検索用インデックス作成に関する研究　マニュアル}\\
   %\vfill \vfill
   %\vfill
   
-  \vspace{87.5mm}
+  \vspace{82.5mm}
   %{\Large 平成24年2月23日}
   %\vspace{15mm}
   
@@ -69,13 +88,43 @@
 \end{titlepage}
 
 %目次
-% \tableofcontents
+\tableofcontents
 % \clearpage
-\clearpage \input{content.tex}{\clearpage}
+% \clearpage \input{content.tex}{\clearpage}
 \large
 \renewcommand{\baselinestretch}{1.1}
 \appendix
-\input{使用方法}
+\chapter{機動するまでの手順}
+GitHubからソースコードをダウンロードし，Linux環境で動作させる手順を説明する．
+
+\section{GitHubからソースコードをダウンロード}
+GitHubからダウンロードする．
+\begin{lstlisting}[caption=hoge,label=fuga]
+  cd ~   # ホームディレクトリに移動
+  git clone https://github.com/[ユーザー名]/[リポジトリ名].git
+\end{lstlisting}
+
+\section{Python環境を構築}
+仮想環境での実行を推奨する．
+Anacondaを用いた．
+
+Anacondaの仮想環境をアクティブにした状態で，必要なパッケージをインストールする．
+\begin{lstlisting}[caption=hoge,label=fuga]
+
+\end{lstlisting}
+
+\section{動作確認}
+\begin{lstlisting}[caption=hoge,label=fuga]
+  cd ~/[リポジトリ名]
+  conda activate [仮想環境名]
+  flask run
+  ＃ポート番号を指定する場合
+  flask run --port [ポート番号]
+  ＃ホスト名を指定する場合
+  flask run --host [ホスト名]
+\end{lstlisting}
+
+\chapter{使用方法}
 \label{sec:usage}
 本システムの使用方法について説明する．
 手順は大きく2つに分かれており，動画を解析するために事前に動画をアップロードすること，そして画像を用いた検索を行うことがそれぞれ必要となる．
@@ -204,26 +253,5 @@
 詳細な情報については，動画フレーム数のリンクから閲覧できる．ここでは，どのように認識されているかを確認でき，実際の動画を視聴することが可能となっている．
 
 また，一度検索した画像は検索履歴として残っているため後から同じ画像を検索することが可能である．ヘッダー「画像検索履歴」を選択することで履歴が表示される．
-
-\section{まとめ}
-本章では，本システムの使用方法について説明した．
-
-\clearpage
-
-\chapter*{謝辞}
-\addcontentsline{toc}{chapter}{謝辞}
-本研究の実施の機会を与えてくださり，終始丁寧かつ的確な御指導，御鞭撻をいただきました准教授　藤原　和彦　氏に深謝の意を表し，厚く御礼申し上げます．\par
-また，日常的に有益な議論をしていただいた研究室の皆様に感謝いたします．
-
-\clearpage
-
-\begin{thebibliography}{9}
-\addcontentsline{toc}{chapter}{\bibname}
-\bibitem{google_data} 月間6,500万ユーザーを超えたYouTube，2020年の国内利用実態──テレビでの利用も2倍に, Google https://www.thinkwithgoogle.com/intl/ja-jp/marketing-strategies/video/youtube-recap2020-2/
-\bibitem{cnn} A Comprehensive Guide to Convolutional Neural Networks — the ELI5 way, Towards Data Science https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53
-\bibitem{detectron2} Detectron2,Meta AI https://ai.facebook.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-/
-\bibitem{coco} Microsoft COCO: Common Objects in Context, Microsoft https://cocodataset.org/
-
-\end{thebibliography}
 
 \end{document}

@@ -1,0 +1,10 @@
+\contentsline {chapter}{\numberline {付 録A }機動するまでの手順}{ii}{}%
+\contentsline {section}{\numberline {A.1}GitHubからソースコードをダウンロード}{ii}{}%
+\contentsline {section}{\numberline {A.2}Python環境を構築}{ii}{}%
+\contentsline {section}{\numberline {A.3}動作確認}{ii}{}%
+\contentsline {chapter}{\numberline {付 録B }使用方法}{iv}{}%
+\contentsline {section}{\numberline {B.1}ユーザ登録}{iv}{}%
+\contentsline {section}{\numberline {B.2}ログイン}{v}{}%
+\contentsline {section}{\numberline {B.3}動画のアップロードについて}{v}{}%
+\contentsline {section}{\numberline {B.4}動画データの情報表示}{vii}{}%
+\contentsline {section}{\numberline {B.5}画像を用いた検索について}{ix}{}%
