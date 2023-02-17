@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.euc) (TeX Live 2022) (preloaded format=platex 2022.12.2)  17 FEB 2023 08:45
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.euc) (TeX Live 2022) (preloaded format=platex 2022.12.2)  17 FEB 2023 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -548,7 +548,7 @@ File: image/result_2_5_2.png Graphic file (type bmp)
 File: image/result_2_5_3.png Graphic file (type bmp)
 <image/result_2_5_3.png>
 
-Overfull \hbox (8.24332pt too wide) detected at line 1324
+Overfull \hbox (8.24332pt too wide) detected at line 1322
 []\JY1/mc/m/n/14.4 トランザクシ ョ ン時間 \OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 ms\OT1/cmr/m/n/14.4 ] = []
  []
 
@@ -603,4 +603,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  67i,20n,77p,337b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sotsuron2.dvi (59 pages, 137328 bytes).
+Output written on sotsuron2.dvi (59 pages, 137380 bytes).
