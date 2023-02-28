@@ -38,22 +38,14 @@
 \usepackage{listings,jvlisting} %日本語のコメントアウトをする場合jvlisting（もしくはjlisting）が必要
 %ここからソースコードの表示に関する設定
 \lstset{
-  basicstyle={\ttfamily},
-  identifierstyle={\small},
-  commentstyle={\smallitshape},
-  keywordstyle={\small\bfseries},
-  ndkeywordstyle={\small},
-  stringstyle={\small\ttfamily},
-  frame={tb},
-  breaklines=true,
-  columns=[l]{fullflexible},
-  numbers=left,
-  xrightmargin=0zw,
-  xleftmargin=3zw,
-  numberstyle={\scriptsize},
-  stepnumber=1,
-  numbersep=1zw,
-  lineskip=-0.5ex
+    language=bash,
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    breaklines=true,
+    frame=tb,
+    captionpos=b
 }
 
 \begin{document}
@@ -99,9 +91,9 @@ GitHubからソースコードをダウンロードし，Linux環境で動作さ
 
 \section{GitHubからソースコードをダウンロード}
 GitHubからダウンロードする．
-\begin{lstlisting}[caption=hoge,label=fuga]
+\begin{lstlisting}[caption=Example,escapechar=|]
   cd ~   # ホームディレクトリに移動
-  git clone https://github.com/[ユーザー名]/[リポジトリ名].git
+  git clone https://github.com/[username]/[ripository_name].git
 \end{lstlisting}
 
 \section{Python環境を構築}
@@ -128,6 +120,11 @@ Anacondaの仮想環境をアクティブにした状態で，必要なパッケ
 \label{sec:usage}
 本システムの使用方法について説明する．
 手順は大きく2つに分かれており，動画を解析するために事前に動画をアップロードすること，そして画像を用いた検索を行うことがそれぞれ必要となる．
+
+本研究用のアカウントとして次を用意してある．
+> ユーザー名：kaz-lab
+> メールアドレス：kaz-lab@example.com
+> パスワード：kaz-lab
 
 \section{ユーザ登録}
 本システムでは不特定多数のユーザができるようにするため，ユーザ情報が必要となっている．
